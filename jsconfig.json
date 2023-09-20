@@ -3,7 +3,7 @@
     "paths": {
       "@/*": ["./*"]
     },
-    "baseUrl": "src",
+    "baseUrl": "app",
     "jsx": "preserve",
     "checkJs": true
   },

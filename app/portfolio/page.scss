@@ -1,0 +1,4 @@
+.portfolio-grid{
+    display: grid;
+    grid-template-columns: 1;//repeat(auto-fill, minmax(20rem, 1fr));
+}

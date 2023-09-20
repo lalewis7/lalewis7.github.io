@@ -1,0 +1,108 @@
+[
+    {
+        "name": "Palette Hub",
+        "pathname": "palettehub",
+        "description": "Demonstrated the skills necessary to build a full stack social media website for sharing palettes of colors from concept design to deployment of a minimal viable product.",
+        "type": {
+            "group": "personal",
+            "name": "Personal Project"
+        },
+        "img": "palettehub.png",
+        "links": [
+            {
+                "name": "Live",
+                "link": "https://palettehub.net"
+            },
+            {
+                "name": "GitHub",
+                "link": "https://github.com/lalewis7/palettehub"
+            }
+        ],
+        "skills": [
+            "React",
+            "Spring Boot",
+            "REST API",
+            "Nginx",
+            "MySQL",
+            "Docker",
+            "Docker Compose",
+            "Azure"
+        ]
+    },
+    {
+        "name": "Streamdex",
+        "pathname": "streamdex",
+        "description": "Built and coordinated the full stack development and implementation of a website to query movies and tv shows for streaming service availability and published it to the web using AWS.",
+        "type": {
+            "group": "personal",
+            "name": "Personal Project"
+        },
+        "img": "streamdex.png",
+        "links": [
+            {
+                "name": "Live",
+                "link": "https://streamdex.net"
+            }
+        ],
+        "skills": [
+            "React",
+            "NodeJS",
+            "ExpressJS",
+            "Bootstrap",
+            "REST API",
+            "AWS (EC2 & RDS)",
+            "SASS",
+            "MySQL"
+        ]
+    },
+    {
+        "name": "AEquitas docs",
+        "pathname": "aequitasdocs",
+        "description": "Collaborated with a small team to finish the development of a website for storing and searching legal documents given both technical and business requirements for the nonprofit AEquitas",
+        "type": {
+            "group": "school",
+            "name": "Senior Capstone"
+        },
+        "img": "aequitasdocs.png",
+        "links": [
+            {
+                "name": "Blogs",
+                "link": "https://medium.com/@arthur.lewis/list/senior-capstone-4a02774080f3"
+            },
+            {
+                "name": "Demo",
+                "link": "https://youtu.be/NKWFIlDBhOk"
+            }
+        ],
+        "skills": [
+            "Vue.js",
+            "Typescript",
+            "AWS",
+            "Apache Solr",
+            "Python",
+            "AWS API Gateway",
+            "AWS Lambda Functions"
+        ]
+    },
+    {
+        "name": "Insurance Database",
+        "pathname": "countygarden",
+        "description": "MySQL Relational Database for an insurance company, County Garden. This was a college project for the class \"Database Systems, Algorithms, and Applications\".",
+        "type": {
+            "group": "school",
+            "name": "School Project"
+        },
+        "img": "countygarden.jpg",
+        "links": [
+            {
+                "name": "GitHub",
+                "link": "https://github.com/lalewis7/county-garden"
+            }
+        ],
+        "skills": [
+            "MySQL",
+            "Java",
+            "Docker"
+        ]
+    }
+]

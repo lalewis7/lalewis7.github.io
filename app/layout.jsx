@@ -1,13 +1,18 @@
 import Link from 'next/link'
 import './globals.scss'
-import { Roboto } from 'next/font/google'
+import { Roboto, Roboto_Mono } from 'next/font/google'
 import HeaderOffcanvas from './csr_components/HeaderOffcanvas'
 import HeaderLink from './csr_components/HeaderLink'
-import { FileEarmarkPerson, FilePdf, FilePdfFill, FiletypePdf, Github, Linkedin, Medium } from 'react-bootstrap-icons'
+import { EnvelopeFill, FiletypePdf, Github, Linkedin, Medium } from 'react-bootstrap-icons'
 
 const roboto = Roboto({
   subsets: ['latin'],
   weight: ['100', '300', '400', '500', '700', '900']
+})
+
+const roboto_mono = Roboto_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700']
 })
 
 export const metadata = {
@@ -22,10 +27,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${roboto.className} vh-100 d-flex flex-column`} data-bs-theme="dark">
-        <header className={`navbar navbar-expand-${mobileBreakpoint} sticky top`}>
+        <header className={`navbar navbar-expand-${mobileBreakpoint} sticky-top bg-body-tertiary`}>
           <nav className="container">
-            <Link href="/" className="navbar-brand">
-              Arthur Lewis
+            <Link href="/" className={`navbar-brand ${roboto_mono.className}`}>
+              &lt; Arthur Lewis &#47;&gt;
             </Link>
             <div className={`d-none d-${mobileBreakpoint}-block navbar-collapse`}>
               <ul className="navbar-nav">
@@ -54,7 +59,7 @@ export default function RootLayout({ children }) {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link target="_blank" rel="noopener noreferrer" href="https://medium.com/@arthur.lewis" className="nav-link d-flex align-items-center link-primary">
+                  <Link target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1hu3biR2yxbPmyK9TpuIm4Ps99NtufUKK/view?usp=sharing" className="nav-link d-flex align-items-center link-primary">
                     Resume<FiletypePdf className="ms-1" />
                   </Link>
                 </li>
@@ -63,12 +68,38 @@ export default function RootLayout({ children }) {
             <HeaderOffcanvas breakpoint={mobileBreakpoint} />
           </nav>
         </header>
-        <main className="flex-grow-1">
+        <main className="flex-grow-1 container pt-3">
           {children}
         </main>
-        <footer>
-          <div className="container">
-            <p>Footer</p>
+        <footer className="mt-5">
+          <div className="container py-4">
+            <div className="row">
+              <div className="col">
+                <ul className="d-flex flex-wrap justify-content-center gap-4 h5 m-0">
+                  <li className="nav-item">
+                    <Link target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/arthur-lewis/" className="nav-link d-inline-flex">
+                      <Linkedin />
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link target="_blank" rel="noopener noreferrer" href="https://github.com/lalewis7" className="nav-link d-inline-flex">
+                      <Github />
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link target="_blank" rel="noopener noreferrer" href="https://medium.com/@arthur.lewis" className="nav-link d-inline-flex">
+                      <Medium />
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link target="_blank" rel="noopener noreferrer" href="mailto:l.arthur.lewis7@gmail.com" className="nav-link d-inline-flex d-flex align-items-center gap-2">
+                      <EnvelopeFill />
+                      <span className="h6 m-0">L.Arthur.Lewis7@gmail.com</span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </footer>
       </body>

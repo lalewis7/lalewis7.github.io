@@ -13,10 +13,12 @@
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",
+    "next-mdx-remote": "^4.4.1",
     "react": "18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-bootstrap-icons": "^1.10.3",
     "react-dom": "18.2.0",
-    "sass": "^1.67.0"
+    "sass": "^1.67.0",
+    "typed.js": "^2.0.16"
   }
 }
