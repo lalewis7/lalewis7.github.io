@@ -19,7 +19,7 @@ export async function generateMetadata({ params }){
     const project = project_data.find(prj => prj.pathname === params.name.toLowerCase())
     return project ? {
         title: `${project.name} - Arthur Lewis Project Portfolio`,
-        description: `Find out more about ${project.name}, a ${project.type.name}, using ${project.skills.join(', ')}.`
+        description: `Find out more about ${project.name}, a ${project.type.name}, using ${project.skills.slice(0, project.skills.length-1).join(', ')}, and ${project.skills.slice(-1)}.`
     } : {}
 }
 

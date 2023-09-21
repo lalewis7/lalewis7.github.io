@@ -38,8 +38,8 @@ export default function HeaderOffcanvas(props){
                         {"name": "Projects", "link": "/portfolio"},
                     ].map((val, i) => <>
                         <Nav.Item className="col-6" key={i}>
-                            <Nav.Link as={Link} href={val.link} className="px-0 text-reset">
-                            {val.name}
+                            <Nav.Link as={Link} href={val.link} className="px-0 text-reset" onClick={handleClose}>
+                                {val.name}
                             </Nav.Link>
                         </Nav.Item>
                     </>)}
@@ -53,7 +53,8 @@ export default function HeaderOffcanvas(props){
                         {"name": "Resume", "link": "https://drive.google.com/file/d/1hu3biR2yxbPmyK9TpuIm4Ps99NtufUKK/view?usp=sharing", "icon": <FiletypePdf />},
                     ].map((val, i) => <>
                         <Nav.Item className="col-6" key={i}>
-                            <Nav.Link as={Link} target="_blank" rel="noopener noreferrer" href={val.link} className="d-inline-flex align-items-center gap-2 px-0 text-reset">
+                            <Nav.Link as={Link} target="_blank" rel="noopener noreferrer" href={val.link} 
+                                className="d-inline-flex align-items-center gap-2 px-0 text-reset" onClick={handleClose}>
                             {val.icon}{val.name}
                             </Nav.Link>
                         </Nav.Item>

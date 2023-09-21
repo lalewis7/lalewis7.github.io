@@ -5,6 +5,11 @@ import TypeIcon from "@/components/TypeIcon";
 import { ArrowRight } from "react-bootstrap-icons";
 import Image from "next/image";
 
+export const metadata = {
+    title: 'Project Portfolio - Arthur Lewis',
+    description: 'View my portfolio of personal, school, and work projects I\'ve completed as a software engineer.',
+}
+
 export default function Portfolio(){
     const imgBreakpoint = "md"
     const ProjectCard = (project, inverse) => <>

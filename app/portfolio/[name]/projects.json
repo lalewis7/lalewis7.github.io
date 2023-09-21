@@ -50,6 +50,7 @@
             "React",
             "NodeJS",
             "ExpressJS",
+            "JavaScript",
             "Bootstrap",
             "REST API",
             "AWS (EC2 & RDS)",
@@ -78,7 +79,7 @@
         ],
         "skills": [
             "Vue.js",
-            "Typescript",
+            "TypeScript",
             "AWS",
             "Apache Solr",
             "Python",

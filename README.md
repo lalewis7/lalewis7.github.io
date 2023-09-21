@@ -1,39 +1,35 @@
-# Arthur Lewis portfolio website
+# Arthur Lewis Portfolio [Website](https://arthurlewis.net)
 
-## Header
+#### Hi! My name is Arthur Lewis and this is my portfolio website hosted on GitHub Pages.
 
-- About
-- Projects
-- Contact
+## 🥞 Stack
 
-## Content
+#### Next.js, Bootstrap, SASS, Bootstrap icons, Skill icons, Google Analytics 4, Namecheap
 
-- Blog posts
-- Work experience
-- Skills
-- Contact info
-- Personal projects
-- About me paragraph (education)
+## 🎨 Colors
 
-## About me
+<span style="background-color: #4234fe;padding: 0.5rem;border-radius:0.5rem;font-weight:bold;">Brand Color: #4234fe</span>
 
-Who am I?
+<span style="background-color: #1a191f;padding: 0.5rem;border-radius:0.5rem;font-weight:bold;">Background Color: #1a191f</span>
 
-Hello! My name is Arthur Lewis and I'm a software engineer from Pennington, NJ.
+## 💻 Projects
 
-Why do I code?
+### Metadata
 
-When I was 14 years old, I took a computer programming course writing basic code in Python. Ever since then I've known I want to pursue a career in software engineering.
+```
+/app/portfolio/[name]/projects.json
+```
 
-What are my qualifications?
+### Markdown Files
 
-I started off mostly self taught by reading books, watching tutorials, and exploring online. 
-I made and shared basic games and programs in Java with friends and family. 
-In highschool, I designed a Java program for my history class that added a bibliography and footnotes given the teachers specific requirements (modified version of APA). 
-After starting college I switched my attention to web development following an internship as a Software Engineer for Gearbrain. 
-Since then I've been mostly coding in JavaScript with a focus on Full-stack web development. 
-In May 2023, I graduated from Lehigh University with a Bachelor of Science in Computer Science and Business and a Minor in Data Science.
+```
+/app/projects
+```
 
-What have I been doing recently?
+## 📃 Scripts
 
-Since graduating from Lehigh, I've been working on personal projects such as Palette Hub, showcasing my skills and abilities as a software engineer. I'm currently looking for a full time position ideally near NYC, although I'm open to relocating if necessary. 
+### Start dev server
+
+```sh
+npm run dev
+```

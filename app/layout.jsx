@@ -4,6 +4,8 @@ import { Roboto, Roboto_Mono } from 'next/font/google'
 import HeaderOffcanvas from './csr_components/HeaderOffcanvas'
 import HeaderLink from './csr_components/HeaderLink'
 import { EnvelopeFill, FiletypePdf, Github, Linkedin, Medium } from 'react-bootstrap-icons'
+import Script from 'next/script'
+import Head from 'next/head'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -26,6 +28,15 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-6DVKDWY94S" />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-6DVKDWY94S');
+        `}
+      </Script>
       <body className={`${roboto.className} vh-100 d-flex flex-column`} data-bs-theme="dark">
         <header className={`navbar navbar-expand-${mobileBreakpoint} sticky-top bg-body-tertiary`}>
           <nav className="container">

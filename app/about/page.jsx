@@ -1,8 +1,12 @@
-import IconifyIcon from "@/components/IconifyIcon ";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import { BoxArrowUpRight, InfoCircle } from "react-bootstrap-icons";
+
+export const metadata = {
+    title: 'About Me - Arthur Lewis',
+    description: 'Hi! My name is Arthur Lewis, and I design and create software using the latest frameworks and technologies to positively impact people.',
+}
 
 export default function About(){
 
@@ -84,7 +88,7 @@ export default function About(){
                     I'm a formally trained computer scientist with experience in the following languages, frameworks, and technologies:
                 </p>
                 <div className="d-grid gap-3" style={{fontSize: "3rem", gridTemplateColumns: "repeat(auto-fit, minmax(64px, 1fr))", justifyItems: "center"}}>
-                    {skill_list.map(skill => <Image src={`/skills/${skill}`} alt={skill} width={64} height={64} />)}
+                    {skill_list.map(skill => <Image src={`/skills/${skill}`} alt={skill} width={64} height={64} title={skill.split(".")[0].split("-")[0]} />)}
                 </div>
                 <span className="d-flex align-items-center text-secondary mt-3 gap-1 fw-lighter"><InfoCircle /> Icons from <Link href="https://skillicons.dev/">Skill Icons</Link></span>
             </div>
