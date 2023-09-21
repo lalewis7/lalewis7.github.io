@@ -13,7 +13,7 @@ export default function About(){
     const skill_list = [
         // languages
         'Java-Dark.svg',
-        'Javascript.svg',  
+        'JavaScript.svg',  
         'TypeScript.svg',
 
         // frontend frameworks
