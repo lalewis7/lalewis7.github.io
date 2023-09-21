@@ -2,7 +2,7 @@
     {
         "name": "Palette Hub",
         "pathname": "palettehub",
-        "description": "Demonstrated the skills necessary to build a full stack social media website for sharing palettes of colors from concept design to deployment of a minimal viable product.",
+        "description": "Built a full stack social media website for sharing palettes of colors from concept design to deployment of a minimal viable product.",
         "type": {
             "group": "personal",
             "name": "Personal Project"
@@ -23,6 +23,8 @@
             "Spring Boot",
             "REST API",
             "Nginx",
+            "Bootstrap",
+            "SASS",
             "MySQL",
             "Docker",
             "Docker Compose",
@@ -58,7 +60,7 @@
     {
         "name": "AEquitas docs",
         "pathname": "aequitasdocs",
-        "description": "Collaborated with a small team to finish the development of a website for storing and searching legal documents given both technical and business requirements for the nonprofit AEquitas",
+        "description": "Collaborated with a small team to finish the development of a website for storing and searching legal documents given both technical and business requirements for the nonprofit AEquitas.",
         "type": {
             "group": "school",
             "name": "Senior Capstone"
@@ -87,7 +89,7 @@
     {
         "name": "Insurance Database",
         "pathname": "countygarden",
-        "description": "MySQL Relational Database for an insurance company, County Garden. This was a college project for the class \"Database Systems, Algorithms, and Applications\".",
+        "description": "MySQL Relational Database for an insurance company, County Garden. This was a college project for the class \"Database Systems, Algorithms, and Applications.\"",
         "type": {
             "group": "school",
             "name": "School Project"

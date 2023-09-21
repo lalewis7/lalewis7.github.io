@@ -6,8 +6,8 @@
 @import "../node_modules/bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
-$primary: #6b35ff;//#390eb0;
-$body-bg-dark: #201f21;
+$primary: #4234fe;//#6b35ff;//#390eb0;
+$body-bg-dark: #1a191f;
 $body-tertiary-bg-dark: tint-color($body-bg-dark, 1%);
 $body-secondary-color-dark: tint-color($body-bg-dark, 70%);
 
@@ -88,8 +88,21 @@ a{
     color: $primary;
     text-decoration: none;
     &:hover{
-        color: tint-color($primary, 15%);
+        color: tint-color($primary, 25%);
         text-decoration: underline;
+        text-decoration-thickness: 2px;
+        @extend .link-offset-1;
+    }
+    .badge.text-bg-primary:hover{
+        background-color: tint-color($primary, 10%) !important;
+        position: relative;
+        bottom: 0.1rem;
+    }
+}
+
+.link-primary{
+    &:hover{
+        color: tint-color($primary, 0%) !important;
     }
 }
 

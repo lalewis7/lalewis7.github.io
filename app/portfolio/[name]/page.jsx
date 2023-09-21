@@ -7,6 +7,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import path from 'path';
 import { promises as fs } from 'fs';
 import TypeIcon from "@/components/TypeIcon";
+import Image from "next/image";
 
 export async function generateStaticParams() {
     return project_data.map(project => ({
@@ -17,7 +18,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }){
     const project = project_data.find(prj => prj.pathname === params.name.toLowerCase())
     return project ? {
-        title: `${project.name} - Arthur Lewis`,
+        title: `${project.name} - Arthur Lewis Project Portfolio`,
         description: `Find out more about ${project.name}, a ${project.type.name}, using ${project.skills.join(', ')}.`
     } : {}
 }
@@ -104,7 +105,7 @@ export default async function Project({ params }){
                     </span>
                 </>)}
             </h6>
-            {project.img ? <img src={`/${project.img}`} className="w-100 rounded mb-3" /> : ''}
+            {project.img ? <Image src={`/${project.img}`} alt="preview image" fill={true} className="position-relative w-100 rounded mb-3" /> : ''}
             {markdownSource ? <MDXRemote source={markdownSource} /> : ''}
         </div>
     </>

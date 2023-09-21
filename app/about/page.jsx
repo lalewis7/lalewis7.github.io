@@ -2,10 +2,44 @@ import IconifyIcon from "@/components/IconifyIcon ";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import { BoxArrowUpRight, InfoCircle } from "react-bootstrap-icons";
 
 export default function About(){
 
-    const Icon = (icon) => <div className="w-fit-content"><IconifyIcon icon={icon} /></div>
+    const skill_list = [
+        // languages
+        'Java-Dark.svg',
+        'Javascript.svg',  
+        'TypeScript.svg',
+
+        // frontend frameworks
+        'React-Dark.svg', 
+        'NextJS-Dark.svg',
+        'VueJS-Dark.svg', 
+        'Redux.svg', 
+        'Bootstrap.svg', 
+        'Sass.svg', 
+        'HTML.svg', 
+        'CSS.svg', 
+
+        // backend frameworks
+        'Nginx.svg', 
+        'Spring-Dark.svg', 
+        'ExpressJS-Dark.svg', 
+        'NodeJS-Dark.svg', 
+
+        // database
+        'MySQL-Dark.svg', 
+        'MongoDB.svg', 
+        'PostgreSQL-Dark.svg',
+        'Postman.svg', 
+
+        // deployment
+        'Git.svg', 
+        'Docker.svg', 
+        'Azure-Dark.svg', 
+        'AWS-Dark.svg'
+    ]
 
     return <>
         <Script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" />
@@ -26,31 +60,33 @@ export default function About(){
                     <Image src="/self.jpg" alt="Arthur" width={260} height={260} className="rounded-circle" />
                 </div>
                 <p>
-                    Hello! My name is Arthur Lewis and I'm a software engineer from Pennington, NJ.
+                Hi! My name is Arthur Lewis, and I am a recent graduate of Lehigh University looking for an entry level software engineer role.
                 </p>
                 <p>
-                    When I was 14 years old, I took a computer programming course writing basic code in Python. Ever since then I've known I want to pursue a career in software engineering.
+                I have a degree in computer science and business with a minor in data science, however, I have been passionate about technology and creating programs that entertain, educate, and maybe make life a little easier since I was 14 years old.
                 </p>
                 <p>
-                I started off mostly self taught by reading books, watching tutorials, and exploring online.
-                I made and shared basic games and programs in Java with friends and family.
+                My interest and expertise is in building full stack websites, from the frontend user interface and experience to the backend business logic, database design, and infrastructure.
                 </p>
                 <p>
-                After starting college I switched my attention to web development following an internship as a Software Engineer for Gearbrain. 
-                Since then I've been mostly coding in JavaScript with a focus on Full-stack web development.
-                In May 2023, I graduated from Lehigh University with a Bachelor of Science in Computer Science and Business and a Minor in Data Science.
-                </p>
-                <p>
-                    Since graduating from Lehigh, I've been working on personal projects such as Palette Hub, showcasing my skills and abilities as a software engineer. I'm currently looking for a full time position ideally near NYC, although I'm open to relocating if necessary.
+                I am looking to contribute my skills by working on a team of other technology enthusiasts to create solutions and solve problems. If you're interested in chatting about software engineering or how I might contribute to your technology needs,
+                {' '}email me at <Link href="mailto:l.arthur.lewis7@gmail.com">l.arthur.lewis7@gmail.com</Link>{' '}
+                or connect with me on{' '}
+                <Link target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/arthur-lewis/" className="d-inline-flex align-items-center gap-1">
+                    LinkedIn<BoxArrowUpRight />
+                </Link>.
                 </p>
             </div>
-            <div>
-                <h2>Skills</h2>
-                <div className="d-grid gap-3" style={{fontSize: "3rem", gridTemplateColumns: "repeat(auto-fit, minmax(50px, 1fr))", justifyItems: "center"}}>
-                    {['java', 'javascript', 'typescript-icon', 'python', 'react', 'vue', 'redux', 'bootstrap', 'html-5', 'css-3', 'sass', 'spring-icon', 
-                    'nodejs-icon', 'nginx', 'postman-icon', 'mysql-icon', 'postgresql', 'mongodb-icon', 'aws', 'microsoft-azure', 'docker-icon', 
-                    'git-icon', 'github-icon', 'visual-studio-code'].map(skill => Icon(skill))}
+            <div className="mb-4 mt-5">
+                {/* <h2>Skills</h2> */}
+                <hr className="pb-4" />
+                <p className="pb-4">
+                    I'm a formally trained computer scientist with experience in the following languages, frameworks, and technologies:
+                </p>
+                <div className="d-grid gap-3" style={{fontSize: "3rem", gridTemplateColumns: "repeat(auto-fit, minmax(64px, 1fr))", justifyItems: "center"}}>
+                    {skill_list.map(skill => <Image src={`/skills/${skill}`} alt={skill} width={64} height={64} />)}
                 </div>
+                <span className="d-flex align-items-center text-secondary mt-3 gap-1 fw-lighter"><InfoCircle /> Icons from <Link href="https://skillicons.dev/">Skill Icons</Link></span>
             </div>
         </div>
     </>

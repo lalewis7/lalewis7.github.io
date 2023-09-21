@@ -1,7 +1,6 @@
 import Link from "next/link";
 // @ts-ignore
 import projects from "./[name]/projects.json";
-import "./page.scss";
 import TypeIcon from "@/components/TypeIcon";
 import { ArrowRight } from "react-bootstrap-icons";
 import Image from "next/image";
@@ -12,7 +11,7 @@ export default function Portfolio(){
         <div className="card w-100 overflow-hidden">
             <div className="row g-0">
                 <div className={`col-${imgBreakpoint}-7 d-flex align-items-center ${inverse ? `order-${imgBreakpoint}-2` : `order-${imgBreakpoint}-1`}`}>
-                    <Link href={`/portfolio/${project.pathname}`}>
+                    <Link href={`/portfolio/${project.pathname}`} className="w-100">
                         <Image src={`/${project.img}`} alt={project.name} fill={true} className="w-100 rounded position-relative" />
                     </Link>
                 </div>
@@ -48,7 +47,7 @@ export default function Portfolio(){
                 </ol>
             </nav>
             <h1>Project Portfolio</h1>
-            <div className="portfolio-grid gap-3">
+            <div className="d-grid gap-3">
                 {projects.map((project, i) => ProjectCard(project, i % 2 === 1))}
             </div>
         </div>

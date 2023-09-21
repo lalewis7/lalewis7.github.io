@@ -17,7 +17,7 @@ const roboto_mono = Roboto_Mono({
 
 export const metadata = {
   title: 'Arthur Lewis',
-  description: 'Software engineer',
+  description: 'Hi! My name is Arthur Lewis, and I design and create software using the latest frameworks and technologies to positively impact people.',
 }
 
 export default function RootLayout({ children }) {
@@ -39,9 +39,6 @@ export default function RootLayout({ children }) {
                 </li>
                 <li className="nav-item">
                   <HeaderLink label="Projects" route="/portfolio" />
-                </li>
-                <li className="nav-item">
-                  <HeaderLink label="Contact" route="/contact" />
                 </li>
                 <li className="nav-item">
                   <Link target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/arthur-lewis/" className="nav-link d-inline-flex">
