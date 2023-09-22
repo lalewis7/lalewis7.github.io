@@ -64,16 +64,16 @@ export default function About(){
                     <Image src="/self.jpg" alt="Arthur" width={260} height={260} className="rounded-circle" />
                 </div>
                 <p>
-                Hi! My name is Arthur Lewis, and I am a recent graduate of Lehigh University looking for an entry level software engineer role.
+                Hi there! My name is Arthur Lewis, and I am a creative, dynamic, and meticulous full-stack software engineer with a passion for facilitating positive change through my work.
                 </p>
                 <p>
-                I have a degree in computer science and business with a minor in data science, however, I have been passionate about technology and creating programs that entertain, educate, and maybe make life a little easier since I was 14 years old.
+                I hold an integrated degree in computer science and business with a minor in data science from Lehigh University — however, my expertise and enthusiasm for technology extends far past my undergraduate education. I&rsquo;ve been creating programs that entertain, educate, and, maybe, make life a little easier since I was 14 years old.
                 </p>
                 <p>
                 My interest and expertise is in building full stack websites, from the frontend user interface and experience to the backend business logic, database design, and infrastructure.
                 </p>
                 <p>
-                I am looking to contribute my skills by working on a team of other technology enthusiasts to create solutions and solve problems. If you're interested in chatting about software engineering or how I might contribute to your technology needs,
+                I am looking to contribute my skills to a team of other technology enthusiasts who are committed to solving problems. If you're interested in chatting about software engineering or how I might contribute to your technology needs,
                 {' '}email me at <Link href="mailto:l.arthur.lewis7@gmail.com">l.arthur.lewis7@gmail.com</Link>{' '}
                 or connect with me on{' '}
                 <Link target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/arthur-lewis/" className="d-inline-flex align-items-center gap-1">

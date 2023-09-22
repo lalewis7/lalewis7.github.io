@@ -1,10 +1,10 @@
 # Arthur Lewis Portfolio [Website](https://arthurlewis.net)
 
-#### Hi! My name is Arthur Lewis and this is my portfolio website hosted on GitHub Pages.
+Hi! My name is Arthur Lewis and this is my portfolio website hosted on GitHub Pages.
 
 ## 🥞 Stack
 
-#### Next.js, Bootstrap, SASS, Bootstrap icons, Skill icons, Google Analytics 4, Namecheap
+Next.js, Bootstrap, SASS, Bootstrap icons, Skill icons, Google Analytics 4, Namecheap.com
 
 ## 🎨 Colors
 

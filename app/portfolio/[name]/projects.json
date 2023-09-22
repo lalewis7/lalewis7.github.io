@@ -88,6 +88,33 @@
         ]
     },
     {
+        "name": "Portfolio Website",
+        "pathname": "portfolio",
+        "description": "Built a portfolio website to access all my social accounts, projects, and resume hosted on GitHub Pages",
+        "type": {
+            "group": "personal",
+            "name": "Personal Project"
+        },
+        "img": "portfolio.png",
+        "links": [
+            {
+                "name": "Live",
+                "link": "https://arthurlewis.net"
+            },
+            {
+                "name": "GitHub",
+                "link": "https://github.com/lalewis7/lalewis7.github.io"
+            }
+        ],
+        "skills": [
+            "Next.js",
+            "Bootstrap",
+            "SASS",
+            "GitHub Actions",
+            "GitHub Pages"
+        ]
+    },
+    {
         "name": "Insurance Database",
         "pathname": "countygarden",
         "description": "MySQL Relational Database for an insurance company, County Garden. This was a college project for the class \"Database Systems, Algorithms, and Applications.\"",
