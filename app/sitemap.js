@@ -1,5 +1,5 @@
 // @ts-ignore
-import projects from "./portfolio/[name]/projects.json"
+import projects from "@/config/projects.json"
 
 export default function sitemap() {
     return [
