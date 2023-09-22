@@ -134,5 +134,44 @@
             "Java",
             "Docker"
         ]
+    },
+    {
+        "name": "Message Board",
+        "pathname": "thebuzz",
+        "description": "Collaborated with a small team to create a message board (similar to twitter). This project was deployed to Heroku for the class \"Software Engineering.\"",
+        "type": {
+            "group": "school",
+            "name": "School Project"
+        },
+        "img": "thebuzz.png",
+        "links": [],
+        "skills": [
+            "Java",
+            "TypeScript",
+            "React",
+            "Webpack",
+            "Flutter",
+            "Spark",
+            "REST API",
+            "PostgreSQL",
+            "Memcached",
+            "Heroku",
+            "Agile"
+        ]
+    },
+    {
+        "name": "Key/Value Store",
+        "pathname": "osdesign",
+        "description": "Worked with a partner to create a Server/Client Key Value store. This was a college project for the class \"Operating System Design.\"",
+        "type": {
+            "group": "school",
+            "name": "School Project"
+        },
+        "img": "osdesign.jpg",
+        "links": [],
+        "skills": [
+            "C++",
+            "C"
+        ]
     }
 ]
