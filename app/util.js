@@ -1,0 +1,1 @@
+export const getSkillIconName = name => name.split(".")[0].split("-")[0]

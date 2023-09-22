@@ -1,0 +1,30 @@
+[
+    "Java-Dark.svg",
+    "JavaScript.svg",  
+    "TypeScript.svg",
+    "C++.svg",
+
+    "React-Dark.svg", 
+    "NextJS-Dark.svg",
+    "VueJS-Dark.svg", 
+    "Redux.svg", 
+    "Bootstrap.svg", 
+    "Sass.svg", 
+    "HTML.svg", 
+    "CSS.svg", 
+
+    "Nginx.svg", 
+    "Spring-Dark.svg", 
+    "ExpressJS-Dark.svg", 
+    "NodeJS-Dark.svg", 
+
+    "MySQL-Dark.svg", 
+    "MongoDB.svg", 
+    "PostgreSQL-Dark.svg",
+    "Postman.svg", 
+
+    "Git.svg", 
+    "Docker.svg", 
+    "Azure-Dark.svg", 
+    "AWS-Dark.svg"
+]

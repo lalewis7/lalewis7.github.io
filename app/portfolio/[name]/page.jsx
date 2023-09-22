@@ -1,6 +1,6 @@
 import Link from "next/link"
 // @ts-ignore
-import project_data from "./projects.json";
+import project_data from "@/config/projects.json";
 import { BoxArrowUpRight, Github, GlobeAmericas, Medium, PlayBtn } from "react-bootstrap-icons";
 // markdown -> html
 import { MDXRemote } from 'next-mdx-remote/rsc'
@@ -41,7 +41,7 @@ export const dynamicParams = false
 
 export async function getProjectMarkdown(name){
     try {
-        const postsDirectory = "app/projects"
+        const postsDirectory = 'app/config/projects';
         const fullPath = path.join(postsDirectory, `${name}.md`);
         return await fs.readFile(fullPath, 'utf8');
     }

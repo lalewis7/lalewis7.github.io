@@ -55,8 +55,8 @@ export default function RootLayout({ children }) {
             gtag('config', '${process.env.GA4_CODE}');
         `}
       </Script>
-      <body className={`${roboto.className} vh-100 d-flex flex-column`} data-bs-theme="dark">
-        <header className={`navbar navbar-expand-${mobileBreakpoint} sticky-top bg-primary`}>
+      <body className={`${roboto.className} vh-100 d-flex flex-column pt-5`} data-bs-theme="dark">
+        <header className={`navbar navbar-expand-${mobileBreakpoint} fixed-top`}>
           <nav className="container">
             <Link href="/" className={`navbar-brand ${roboto_mono.className}`}>
               &lt; Arthur Lewis &#47;&gt;
@@ -94,7 +94,7 @@ export default function RootLayout({ children }) {
             <HeaderOffcanvas breakpoint={mobileBreakpoint} />
           </nav>
         </header>
-        <main className="flex-grow-1 container pt-4">
+        <main className="flex-grow-1 container pt-5">
           {children}
         </main>
         <footer className="mt-5">
