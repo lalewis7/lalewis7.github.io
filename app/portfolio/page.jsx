@@ -5,9 +5,20 @@ import TypeIcon from "@/components/TypeIcon";
 import { ArrowRight } from "react-bootstrap-icons";
 import Image from "next/image";
 
+const page_title = 'Project Portfolio - Arthur Lewis'
+const page_description = 'View my portfolio of personal, school, and work projects I\'ve completed as a software engineer.'
+
 export const metadata = {
-    title: 'Project Portfolio - Arthur Lewis',
-    description: 'View my portfolio of personal, school, and work projects I\'ve completed as a software engineer.',
+    title: page_title,
+    description: page_description,
+    openGraph: {
+        title: page_title,
+        description: page_description
+    },
+    twitter: {
+        title: page_title,
+        description: page_description
+    }
 }
 
 export default function Portfolio(){

@@ -3,9 +3,20 @@ import Link from "next/link";
 import Script from "next/script";
 import { BoxArrowUpRight, InfoCircle } from "react-bootstrap-icons";
 
+const page_title = 'About Me - Arthur Lewis'
+const page_description = 'Hi! My name is Arthur Lewis, and I design and create software using the latest frameworks and technologies to positively impact people.'
+
 export const metadata = {
-    title: 'About Me - Arthur Lewis',
-    description: 'Hi! My name is Arthur Lewis, and I design and create software using the latest frameworks and technologies to positively impact people.',
+    title: page_title,
+    description: page_description,
+    openGraph: {
+        title: page_title,
+        description: page_description
+    },
+    twitter: {
+        title: page_title,
+        description: page_description
+    }
 }
 
 export default function About(){
@@ -15,6 +26,7 @@ export default function About(){
         'Java-Dark.svg',
         'JavaScript.svg',  
         'TypeScript.svg',
+        'C++.svg',
 
         // frontend frameworks
         'React-Dark.svg', 
@@ -45,6 +57,8 @@ export default function About(){
         'AWS-Dark.svg'
     ]
 
+    const getSkillIconName = name => {console.log(name);return name.split(".")[0].split("-")[0]}
+
     return <>
         <Script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" />
         <div className="max-w-lg mx-auto">
@@ -74,9 +88,9 @@ export default function About(){
                 </p>
                 <p>
                 I am looking to contribute my skills to a team of other technology enthusiasts who are committed to solving problems. If you're interested in chatting about software engineering or how I might contribute to your technology needs,
-                {' '}email me at <Link href="mailto:l.arthur.lewis7@gmail.com">l.arthur.lewis7@gmail.com</Link>{' '}
+                {' '}email me at <Link href={`mailto:${process.env.EMAIL}`}>{process.env.EMAIL}</Link>{' '}
                 or connect with me on{' '}
-                <Link target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/arthur-lewis/" className="d-inline-flex align-items-center gap-1">
+                <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="d-inline-flex align-items-center gap-1">
                     LinkedIn<BoxArrowUpRight />
                 </Link>.
                 </p>
@@ -88,8 +102,11 @@ export default function About(){
                     I'm a formally trained computer scientist with experience in the following languages, frameworks, and technologies:
                 </p>
                 <div className="d-grid gap-3" style={{fontSize: "3rem", gridTemplateColumns: "repeat(auto-fit, minmax(64px, 1fr))", justifyItems: "center"}}>
-                    {skill_list.map(skill => <Image src={`/skills/${skill}`} alt={skill} width={64} height={64} title={skill.split(".")[0].split("-")[0]} />)}
+                    {skill_list.map(skill => <Image src={`/skills/${skill}`} alt={skill} width={64} height={64} title={getSkillIconName(skill)} />)}
                 </div>
+                <p className="fw-light text-secondary mt-3 mb-0 fst-italic">{
+                    `(${skill_list.map(skill => getSkillIconName(skill)).splice(0, skill_list.length - 1).join(', ')}, and ${getSkillIconName(skill_list.splice(-1)[0])})`
+                }</p>
                 <span className="d-flex align-items-center text-secondary mt-3 gap-1 fw-lighter"><InfoCircle /> Icons from <Link href="https://skillicons.dev/">Skill Icons</Link></span>
             </div>
         </div>

@@ -17,9 +17,23 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }){
     const project = project_data.find(prj => prj.pathname === params.name.toLowerCase())
+
+    const page_title = `${project.name} - Arthur Lewis Project Portfolio`
+    const page_description = `Find out more about ${project.name}, a ${project.type.name}, using ${project.skills.slice(0, project.skills.length-1).join(', ')}, and ${project.skills.slice(-1)}.`
+
     return project ? {
-        title: `${project.name} - Arthur Lewis Project Portfolio`,
-        description: `Find out more about ${project.name}, a ${project.type.name}, using ${project.skills.slice(0, project.skills.length-1).join(', ')}, and ${project.skills.slice(-1)}.`
+        title: page_title,
+        description: page_description,
+        openGraph: {
+            title: page_title,
+            description: page_description,
+            images: project.img
+        },
+        twitter: {
+            title: page_title,
+            description: page_description,
+            images: project.img
+        }
     } : {}
 }
 
