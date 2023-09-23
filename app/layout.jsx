@@ -76,12 +76,12 @@ export default function RootLayout({ children }) {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex"  tabIndex={0} role="link" aria-label="LinkedIn">
+                  <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="LinkedIn">
                     <Linkedin />
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link target="_blank" rel="noopener noreferrer" href={process.env.GITHUB_LINK} className="nav-link d-inline-flex"  tabIndex={0} role="link" aria-label="GitHub">
+                  <Link target="_blank" rel="noopener noreferrer" href={process.env.GITHUB_LINK} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="GitHub">
                     <Github />
                   </Link>
                 </li>
@@ -114,13 +114,13 @@ export default function RootLayout({ children }) {
                   </div>
                   <div className="col d-flex align-items-center align-items-md-start">
                     <span className="h4 d-inline-flex gap-4 ps-1">
-                      <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex">
+                      <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="LinkedIn">
                         <Linkedin />
                       </Link>
-                      <Link target="_blank" rel="noopener noreferrer" href={process.env.GITHUB_LINK} className="nav-link d-inline-flex">
+                      <Link target="_blank" rel="noopener noreferrer" href={process.env.GITHUB_LINK} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="GitHub">
                         <Github />
                       </Link>
-                      <Link target="_blank" rel="noopener noreferrer" href={process.env.MEDIUM_LINK} className="nav-link d-inline-flex">
+                      <Link target="_blank" rel="noopener noreferrer" href={process.env.MEDIUM_LINK} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="Medium">
                         <Medium />
                       </Link>
                     </span>
@@ -131,12 +131,12 @@ export default function RootLayout({ children }) {
                 <h4>Sitemap</h4>
                 <div className="row">
                   <div className="col col-6 gap-2 d-flex flex-column">
-                    <span className="d-flex"><Link href="/" className="text-reset fw-light d-inline-flex">Home</Link></span>
-                    <span className="d-flex"><Link href="/portfolio" className="text-reset fw-light d-inline-flex">Projects</Link></span>
+                    <span className="d-flex"><Link href="/" className="text-reset fw-light d-inline-flex" tabIndex={0} role="link" aria-label="Home">Home</Link></span>
+                    <span className="d-flex"><Link href="/portfolio" className="text-reset fw-light d-inline-flex" tabIndex={0} role="link" aria-label="Projects">Projects</Link></span>
                   </div>
                   <div className="col col-6 gap-2 d-flex flex-column">
-                    <span className="d-flex"><Link href="/about" className="text-reset fw-light d-inline-flex">About</Link></span>
-                    <span className="d-flex"><Link href="/resume" className="text-reset fw-light d-inline-flex">Resume</Link></span>
+                    <span className="d-flex"><Link href="/about" className="text-reset fw-light d-inline-flex" tabIndex={0} role="link" aria-label="About">About</Link></span>
+                    <span className="d-flex"><Link href="/resume" className="text-reset fw-light d-inline-flex" tabIndex={0} role="link" aria-label="Resume">Resume</Link></span>
                   </div>
                 </div>
               </div>
@@ -145,7 +145,8 @@ export default function RootLayout({ children }) {
                 <div className="row">
                   <div className="col">
                     <span>
-                      <Link target="_blank" rel="noopener noreferrer" href={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}/view?usp=sharing`} className="text-reset fw-light d-inline-flex align-items-center">
+                      <Link target="_blank" rel="noopener noreferrer" href={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}/view?usp=sharing`} 
+                        className="text-reset fw-light d-inline-flex align-items-center" tabIndex={0} role="link" aria-label="View Resume in Google Drive">
                         Resume<FiletypePdf className="ms-1" />
                       </Link>
                     </span>

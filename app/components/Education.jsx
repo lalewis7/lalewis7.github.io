@@ -4,7 +4,7 @@ export default function Education({ edu }) {
     return <>
         <div className="d-flex gap-3">
             <div>
-                <Image src={`/education/${edu.img}`} alt={`${edu.degree} logo`} width={64} height={64} className="rounded-3" />
+                <Image src={`/education/${edu.img}`} alt={`${edu.school} logo`} width={64} height={64} className="rounded-3" />
             </div>
             <div className="flex-grow-1">
                 <div className="row flex-grow-1">

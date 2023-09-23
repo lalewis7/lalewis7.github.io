@@ -72,7 +72,7 @@ export default function Home() {
             I'm a formally trained computer scientist with experience in the following languages, frameworks, and technologies:
         </p>
         <div className="d-grid gap-3" style={{fontSize: "3rem", gridTemplateColumns: "repeat(auto-fit, minmax(64px, 1fr))", justifyItems: "center"}}>
-          {skills.map(skill => <Image src={`/skills/${skill}`} alt={skill} width={64} height={64} title={getSkillIconName(skill)} />)}
+          {skills.map(skill => <Image src={`/skills/${skill}`} alt={getSkillIconName(skill)} width={64} height={64} title={getSkillIconName(skill)} />)}
         </div>
         <span className="d-flex align-items-center justify-content-end text-secondary-emphasis mt-1 gap-1 fw-lighter">
           <InfoCircle /> Icons from <Link href="https://skillicons.dev/" tabIndex={-1} role="link" aria-label="Skill Icons">Skill Icons</Link>
