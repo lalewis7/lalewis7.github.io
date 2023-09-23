@@ -111,7 +111,7 @@ export default function RootLayout({ children }) {
                 <div className="row">
                   <div className="col col-md-12">
                     <h3 className="m-0">Arthur Lewis</h3>
-                    <h6 className="mb-3 fw-light">Software Engineer</h6>
+                    <h6 className="mb-1 mb-sm-3 fw-light">Software Engineer</h6>
                   </div>
                   <div className="col d-flex align-items-center align-items-md-start">
                     <span className="h4 d-inline-flex gap-4 ps-1">
@@ -160,6 +160,13 @@ export default function RootLayout({ children }) {
                     <CopyTextInput />
                   </div>
                 </div>
+              </div>
+            </div>
+            <div className="row mt-2">
+              <div className="col">
+                <p className="text-secondary">
+                Lanceton Arthur Lewis II &copy; 2023
+                </p>
               </div>
             </div>
           </div>
