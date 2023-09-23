@@ -45,7 +45,7 @@ export default function Home() {
               <button className="btn btn-primary btn-lg rounded-5">Learn More</button>
             </Link>
             <Link href="/portfolio">
-              <button className="btn btn-primary btn-lg rounded-5">See my Work</button>
+              <button className="btn btn-primary btn-lg rounded-5">See My Work</button>
             </Link>
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function Home() {
           {projects.slice(0, 3).map((project, i) => <ProjectCard project={project} inverse={i % 2 === 1} />)}
         </div>
         <Link href="/portfolio" className="align-self-center mt-3">
-          <button className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2">View all Projects <ArrowRight/> </button>
+          <button className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2">View All Projects <ArrowRight/> </button>
         </Link>
       </div>
 
@@ -76,7 +76,7 @@ export default function Home() {
         }</p>
         <span className="d-flex align-items-center text-secondary mt-3 gap-1 fw-lighter"><InfoCircle /> Icons from <Link href="https://skillicons.dev/">Skill Icons</Link></span>
         <Link href="/about" className="align-self-center mt-3">
-          <button className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2">My Experience <ArrowRight/> </button>
+          <button className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2">More About Me <ArrowRight/> </button>
         </Link>
       </div>
 
