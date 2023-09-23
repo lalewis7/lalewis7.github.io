@@ -39,7 +39,7 @@ export default function About(){
             <div>
                 <h1 className="d-inline-flex display-4">About Me</h1>
                 <div className="float-md-end text-center p-3 pb-4 pb-md-3">
-                    <Image src="/self.jpg" alt={`${process.env.NAME} Headshot`} width={260} height={260} className="rounded-circle" />
+                    <Image src="/self.jpg" alt={`${process.env.NEXT_PUBLIC_NAME} Headshot`} width={260} height={260} className="rounded-circle" />
                 </div>
                 <p>
                 Hi there! My name is Arthur Lewis, and I am a creative, dynamic, and meticulous full-stack software engineer with a passion for facilitating positive change through my work.

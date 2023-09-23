@@ -26,7 +26,7 @@ export default function HeaderOffcanvas(props){
         <Offcanvas show={show} onHide={handleClose} className={`d-${props.breakpoint}-none bg-primary`} responsive={props.breakpoint} placement="end">
             <Offcanvas.Header closeButton className="pb-0 px-4">
                 <Offcanvas.Title className={`${roboto_mono.className} text-white fw-bold`}>
-                    &lt; {process.env.NAME} &#47;&gt;
+                    &lt; {process.env.NEXT_PUBLIC_NAME} &#47;&gt;
                 </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className="pt-0 p-4">

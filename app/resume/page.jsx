@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ResumePreview from "./ResumePreview";
 
-const page_title = `Resume - ${process.env.NAME}`
+const page_title = `Resume - ${process.env.NEXT_PUBLIC_NAME}`
 
 export const metadata = {
     title: page_title,

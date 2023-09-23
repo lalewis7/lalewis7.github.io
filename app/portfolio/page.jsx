@@ -3,7 +3,7 @@ import Link from "next/link";
 import projects from "@/config/projects.json";
 import ProjectCard from "@/components/ProjectCard";
 
-const page_title = `Project Portfolio - ${process.env.NAME}`
+const page_title = `Project Portfolio - ${process.env.NEXT_PUBLIC_NAME}`
 const page_description = 'View my portfolio of personal, school, and work projects I\'ve completed as a software engineer.'
 
 export const metadata = {

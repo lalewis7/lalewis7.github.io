@@ -17,7 +17,7 @@ const roboto_mono = Roboto_Mono({
   weight: ['400', '700']
 })
 
-const page_title = `${process.env.NAME} - Portfolio Website`
+const page_title = `${process.env.NEXT_PUBLIC_NAME} - Portfolio Website`
 const page_description = process.env.DESCRIPTION
 
 export const metadata = {
@@ -29,7 +29,7 @@ export const metadata = {
     title: page_title,
     description: page_description,
     url: process.env.METADATA_BASE,
-    siteName: process.env.name,
+    siteName: process.env.NEXT_PUBLIC_NAME,
     locale: 'en_US',
     type: 'website'
   },
@@ -60,7 +60,7 @@ export default function RootLayout({ children }) {
         <header className={`navbar navbar-expand-${mobileBreakpoint} fixed-top`}>
           <nav className="container">
             <Link href="/" className={`navbar-brand ${roboto_mono.className}`}>
-              &lt; {process.env.NAME} &#47;&gt;
+              &lt; {process.env.NEXT_PUBLIC_NAME} &#47;&gt;
             </Link>
             <div className={`d-none d-${mobileBreakpoint}-block navbar-collapse`}>
               <ul className="navbar-nav">

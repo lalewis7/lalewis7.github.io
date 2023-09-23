@@ -19,7 +19,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }){
     const project = project_data.find(prj => prj.pathname === params.name.toLowerCase())
 
-    const page_title = `${project.name} - ${process.env.NAME} Project Portfolio`
+    const page_title = `${project.name} - ${process.env.NEXT_PUBLIC_NAME} Project Portfolio`
     const page_description = `Find out more about ${project.name}, a ${project.type.name}, using ${project.skills.slice(0, project.skills.length-1).join(', ')}, and ${project.skills.slice(-1)}.`
 
     return project ? {
