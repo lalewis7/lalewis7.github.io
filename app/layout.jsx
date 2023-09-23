@@ -76,22 +76,22 @@ export default function RootLayout({ children }) {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex">
+                  <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex"  tabIndex={0} role="link" aria-label="LinkedIn">
                     <Linkedin />
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link target="_blank" rel="noopener noreferrer" href={process.env.GITHUB_LINK} className="nav-link d-inline-flex">
+                  <Link target="_blank" rel="noopener noreferrer" href={process.env.GITHUB_LINK} className="nav-link d-inline-flex"  tabIndex={0} role="link" aria-label="GitHub">
                     <Github />
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link target="_blank" rel="noopener noreferrer" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} className="nav-link d-inline-flex">
+                  <Link target="_blank" rel="noopener noreferrer" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="Email">
                     <EnvelopeFill />
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link target="_blank" rel="noopener noreferrer" href={process.env.MEDIUM_LINK} className="nav-link d-inline-flex">
+                  <Link target="_blank" rel="noopener noreferrer" href={process.env.MEDIUM_LINK} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="Medium">
                     <Medium />
                   </Link>
                 </li>

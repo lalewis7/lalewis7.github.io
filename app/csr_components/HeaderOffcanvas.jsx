@@ -20,7 +20,7 @@ export default function HeaderOffcanvas(props){
     const handleToggle = () => setShow(prev => !prev);
 
     return <>
-        <Button className={`d-${props.breakpoint}-none`} variant=""  onClick={handleToggle}>
+        <Button className={`d-${props.breakpoint}-none`} variant=""  onClick={handleToggle} aria-label="Menu Bar">
             <List width="1.6em" height="1.5em" />
         </Button>
         <Offcanvas show={show} onHide={handleClose} className={`d-${props.breakpoint}-none bg-primary`} responsive={props.breakpoint} placement="end">

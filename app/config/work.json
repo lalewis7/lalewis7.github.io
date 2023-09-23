@@ -3,7 +3,7 @@
         "title": "Software Engineer",
         "company": "Gearbrain",
         "img": "gearbrain.png",
-        "time": "Jun 2019 - Aug 2019",
+        "time": "June 2019 - August 2019",
         "description": [
             "Coded a RWD website using handlebars with the MeteorJS framework for partners and internal workers to manage and update data using the company API.",
             "Implemented the UI based on styles from the content website.",

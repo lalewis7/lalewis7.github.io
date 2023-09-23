@@ -27,7 +27,7 @@ export default function CopyTextInput(){
                     className={`border-light focus-ring focus-ring-light rounded-start-5 ps-3 pe-2`}
                     readOnly
                 />
-                <Button variant="outline-light" onClick={copy} className="rounded-end-5 pe-3">
+                <Button variant="outline-light" onClick={copy} className="rounded-end-5 pe-3" role="button" aria-label="Copy Email to Clipboard">
                     <span className="h5 lh-1">
                     {copied ? <ClipboardCheckFill /> : <Clipboard /> }
                     </span>

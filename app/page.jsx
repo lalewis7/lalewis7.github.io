@@ -68,9 +68,9 @@ export default function Home() {
 
       <div className="mt-5 d-flex flex-column">
         <h2 className="display-5 mb-3">Technical Skills</h2>
-        <h5 className="text-body-secondary pb-4 fw-light">
+        <p className="h5 text-body-secondary pb-4 fw-light">
             I'm a formally trained computer scientist with experience in the following languages, frameworks, and technologies:
-        </h5>
+        </p>
         <div className="d-grid gap-3" style={{fontSize: "3rem", gridTemplateColumns: "repeat(auto-fit, minmax(64px, 1fr))", justifyItems: "center"}}>
           {skills.map(skill => <Image src={`/skills/${skill}`} alt={skill} width={64} height={64} title={getSkillIconName(skill)} />)}
         </div>
