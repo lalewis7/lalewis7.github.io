@@ -21,7 +21,7 @@ export default function(){
             paddingTop: "128%",
             visibility: loading ? "hidden" : "visible"
         }}>
-            <iframe src={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}/preview`} allow="autoplay" style={{
+            <iframe src={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}/preview`} title="Resume Preview" allow="autoplay" style={{
                 position: "absolute",
                 top: 0,
                 left: 0,

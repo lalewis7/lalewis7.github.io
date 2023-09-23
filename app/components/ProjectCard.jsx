@@ -17,7 +17,7 @@ export default function ProjectCard({project, inverse}){
                 </div>
                 <div className={`col-${imgBreakpoint}-5 ${inverse ? `order-${imgBreakpoint}-1` : `order-${imgBreakpoint}-2`}`}>
                     <div className={`px-1 px-${imgBreakpoint}-3 pb-1 pb-lg-3 pt-3`}>
-                        <h3 className="fw-bold">{project.name}</h3>
+                        <div className="h3 fw-bold">{project.name}</div>
                         <div className="h5 d-flex mb-3">
                             <span className="badge rounded-pill text-bg-primary d-flex gap-1 align-items-center">
                                 <TypeIcon type={project.type.group} />

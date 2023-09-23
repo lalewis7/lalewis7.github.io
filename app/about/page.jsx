@@ -37,8 +37,8 @@ export default function About(){
                 </ol>
             </nav>
             <div>
-                <h1 className="d-inline-flex">About Me</h1>
-                <div className="float-md-end text-center p-3">
+                <h1 className="d-inline-flex display-4">About Me</h1>
+                <div className="float-md-end text-center p-3 pb-4 pb-md-3">
                     <Image src="/self.jpg" alt={`${process.env.NAME} Headshot`} width={260} height={260} className="rounded-circle" />
                 </div>
                 <p>
@@ -69,7 +69,7 @@ export default function About(){
                 <div className="d-grid gap-3" style={{fontSize: "3rem", gridTemplateColumns: "repeat(auto-fit, minmax(64px, 1fr))", justifyItems: "center"}}>
                     {skills.map(skill => <Image src={`/skills/${skill}`} alt={getSkillIconName(skill)} width={64} height={64} title={getSkillIconName(skill)} />)}
                 </div>
-                <span className="d-flex align-items-center justify-content-end text-secondary-emphasis mt-1 gap-1 fw-lighter">
+                <span className="d-flex align-items-center justify-content-end text-secondary-emphasis mt-2 gap-1 fw-lighter">
                     <InfoCircle /> Icons from <Link href="https://skillicons.dev/" tabIndex={-1} role="link" aria-label="Skill Icons">Skill Icons</Link>
                 </span>
                 <p className="fw-light text-secondary-emphasis my-3 text-center fst-italic">{

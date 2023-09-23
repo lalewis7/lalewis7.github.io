@@ -74,7 +74,7 @@ export default function Home() {
         <div className="d-grid gap-3" style={{fontSize: "3rem", gridTemplateColumns: "repeat(auto-fit, minmax(64px, 1fr))", justifyItems: "center"}}>
           {skills.map(skill => <Image src={`/skills/${skill}`} alt={getSkillIconName(skill)} width={64} height={64} title={getSkillIconName(skill)} />)}
         </div>
-        <span className="d-flex align-items-center justify-content-end text-secondary-emphasis mt-1 gap-1 fw-lighter">
+        <span className="d-flex align-items-center justify-content-end text-secondary-emphasis mt-2 gap-1 fw-lighter">
           <InfoCircle /> Icons from <Link href="https://skillicons.dev/" tabIndex={-1} role="link" aria-label="Skill Icons">Skill Icons</Link>
         </span>
         <p className="fw-light text-secondary-emphasis my-3 text-center fst-italic">{

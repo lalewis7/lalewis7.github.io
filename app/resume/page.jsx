@@ -27,7 +27,7 @@ export default function Resume(){
                     <li className="breadcrumb-item active" aria-current="page">Resume</li>
                 </ol>
             </nav>
-            <h1 className="mb-3">Resume</h1>
+            <h1 className="mb-3 display-4">Resume</h1>
             <ResumePreview />
             <noscript>
                 <div style={{
@@ -36,7 +36,7 @@ export default function Resume(){
                     width: "100%",
                     paddingTop: "128%"
                 }}>
-                    <iframe src={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}/preview`} allow="autoplay" style={{
+                    <iframe src={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}/preview`} title="Resume Preview" allow="autoplay" style={{
                         position: "absolute",
                         top: 0,
                         left: 0,
