@@ -11,7 +11,8 @@ export const metadata = {
     description: page_description,
     openGraph: {
         title: page_title,
-        description: page_description
+        description: page_description,
+        images: 'opengraph-image.png'
     },
     twitter: {
         title: page_title,

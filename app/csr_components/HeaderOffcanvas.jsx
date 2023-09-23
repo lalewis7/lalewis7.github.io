@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useState } from "react";
 import { Button, Nav, Navbar, Offcanvas } from "react-bootstrap"
-import { FiletypePdf, Github, Linkedin, List, Medium } from "react-bootstrap-icons";
+import { Easel, EaselFill, FileEarmarkPdfFill, FiletypePdf, Github, House, HouseFill, InfoCircle, InfoCircleFill, Linkedin, List, Medium } from "react-bootstrap-icons";
 import { Roboto_Mono } from 'next/font/google'
 
 const roboto_mono = Roboto_Mono({
@@ -33,13 +33,14 @@ export default function HeaderOffcanvas(props){
                 <hr />
                 <Nav as="nav" className="flex-row flex-wrap">
                     {[
-                        {"name": "Home", "link": "/"},
-                        {"name": "About", "link": "/about"},
-                        {"name": "Projects", "link": "/portfolio"},
+                        {"name": "Home", "link": "/", "icon": <HouseFill /> },
+                        {"name": "About", "link": "/about", "icon": <InfoCircleFill /> },
+                        {"name": "Projects", "link": "/portfolio", "icon": <EaselFill /> },
+                        {"name": "Resume", "link": "/resume", "icon": <FileEarmarkPdfFill /> },
                     ].map((val, i) => <>
                         <Nav.Item className="col-6" key={i}>
-                            <Nav.Link as={Link} href={val.link} className="px-0 text-reset" onClick={handleClose}>
-                                {val.name}
+                            <Nav.Link as={Link} href={val.link} className="d-inline-flex align-items-center gap-2 px-0 text-reset" onClick={handleClose}>
+                                {val.icon}{val.name}
                             </Nav.Link>
                         </Nav.Item>
                     </>)}
@@ -50,12 +51,11 @@ export default function HeaderOffcanvas(props){
                         {"name": "LinkedIn", "link": "https://www.linkedin.com/in/arthur-lewis/", "icon": <Linkedin />},
                         {"name": "GitHub", "link": "https://github.com/lalewis7", "icon": <Github />},
                         {"name": "Medium", "link": "https://medium.com/@arthur.lewis", "icon": <Medium />},
-                        {"name": "Resume", "link": "https://drive.google.com/file/d/1hu3biR2yxbPmyK9TpuIm4Ps99NtufUKK/view?usp=sharing", "icon": <FiletypePdf />},
                     ].map((val, i) => <>
                         <Nav.Item className="col-6" key={i}>
                             <Nav.Link as={Link} target="_blank" rel="noopener noreferrer" href={val.link} 
                                 className="d-inline-flex align-items-center gap-2 px-0 text-reset" onClick={handleClose}>
-                            {val.icon}{val.name}
+                                {val.icon}{val.name}
                             </Nav.Link>
                         </Nav.Item>
                     </>)}

@@ -70,6 +70,11 @@ export default function RootLayout({ children }) {
                   <HeaderLink label="Projects" route="/portfolio" />
                 </li>
                 <li className="nav-item">
+                  <Link href="/resume" className="nav-link d-flex align-items-center">
+                    Resume<FiletypePdf className="ms-1" />
+                  </Link>
+                </li>
+                <li className="nav-item">
                   <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex">
                     <Linkedin />
                   </Link>
@@ -84,17 +89,12 @@ export default function RootLayout({ children }) {
                     <Medium />
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link target="_blank" rel="noopener noreferrer" href={process.env.RESUME_LINK} className="nav-link d-flex align-items-center">
-                    Resume<FiletypePdf className="ms-1" />
-                  </Link>
-                </li>
               </ul>
             </div>
             <HeaderOffcanvas breakpoint={mobileBreakpoint} />
           </nav>
         </header>
-        <main className="flex-grow-1 container pt-5">
+        <main className="flex-grow-1 container" style={{paddingTop: "2.25rem"}}>
           {children}
         </main>
         <footer className="mt-5">

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function WorkExperience({ job }) {
     return <>
-        <div className="d-flex gap-2">
+        <div className="d-flex gap-3">
             <div>
                 <Image src={`/work/${job.img}`} alt={`${job.company} logo`} width={64} height={64} className="rounded-3" />
             </div>
