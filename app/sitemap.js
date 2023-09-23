@@ -21,6 +21,12 @@ export default function sitemap() {
             changeFrequency: 'monthly',
             priority: 1,
         },
+        {
+            url: 'https://arthurlewis.net/resume',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 1,
+        },
         ...projects.map(project => ({
             url: `https://arthurlewis.net/portfolio/${project.pathname}`,
             lastModified: new Date(),
