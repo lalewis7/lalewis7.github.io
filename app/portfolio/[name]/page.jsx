@@ -8,6 +8,7 @@ import path from 'path';
 import { promises as fs } from 'fs';
 import TypeIcon from "@/components/TypeIcon";
 import Image from "next/image";
+import LinkIcon from "@/components/LinkIcon";
 
 export async function generateStaticParams() {
     return project_data.map(project => ({
@@ -63,19 +64,6 @@ export default async function Project({ params }){
     if (!project)
         return null
 
-    const LinkIcon = (name) => {
-        switch (name.toLowerCase()){
-            case "live":
-                return <GlobeAmericas />
-            case "github":
-                return <Github />
-            case "blogs":
-                return <Medium />
-            case "demo":
-                return <PlayBtn />
-        }
-    }
-
     const markdownSource = await getProjectMarkdown(params.name)
 
     return <>
@@ -105,7 +93,7 @@ export default async function Project({ params }){
                 {project.links.map(link => <>
                     <Link href={link.link} className="text-decoration-none" target="_blank" rel="noopener noreferrer">
                         <span className="badge rounded-pill text-bg-primary d-flex gap-2 align-items-center">
-                            {LinkIcon(link.name)}
+                            <LinkIcon name={link.name} />
                             {link.name}
                             <BoxArrowUpRight />
                         </span>

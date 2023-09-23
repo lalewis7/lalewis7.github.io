@@ -69,10 +69,10 @@ export default function About(){
                 <div className="d-grid gap-3" style={{fontSize: "3rem", gridTemplateColumns: "repeat(auto-fit, minmax(64px, 1fr))", justifyItems: "center"}}>
                     {skills.map(skill => <Image src={`/skills/${skill}`} alt={skill} width={64} height={64} title={getSkillIconName(skill)} />)}
                 </div>
-                <p className="fw-light text-secondary mt-3 mb-0 fst-italic">{
+                <span className="d-flex align-items-center justify-content-end text-secondary mt-1 gap-1 fw-lighter"><InfoCircle /> Icons from <Link href="https://skillicons.dev/">Skill Icons</Link></span>
+                <p className="fw-light text-secondary-emphasis my-3 text-center fst-italic">{
                     `(${skills.map(skill => getSkillIconName(skill)).slice(0, skills.length - 1).join(', ')}, and ${getSkillIconName(skills.slice(-1)[0])})`
                 }</p>
-                <span className="d-flex align-items-center text-secondary mt-3 gap-1 fw-lighter"><InfoCircle /> Icons from <Link href="https://skillicons.dev/">Skill Icons</Link></span>
             </div>
         </div>
     </>

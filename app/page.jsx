@@ -6,12 +6,15 @@ import projects from "@/config/projects.json";
 // @ts-ignore
 import jobs from "@/config/work.json";
 // @ts-ignore
+import degrees from "@/config/education.json";
+// @ts-ignore
 import skills from "@/config/skills.json";
 import ProjectCard from "./components/ProjectCard";
 import { ArrowRight, EnvelopeFill, FileEarmarkPdfFill, Github, InfoCircle, Linkedin, Medium } from "react-bootstrap-icons";
 import { getSkillIconName } from "./util";
 import WorkExperience from "./components/WorkExperience";
 import styles from "./page.module.scss";
+import Education from "./components/Education";
 
 export default function Home() {
   return <>
@@ -54,7 +57,7 @@ export default function Home() {
       <span className="divider"></span>
 
       <div className="d-flex flex-column" style={{marginTop: "5rem"}}>
-        <h2 className="mb-3">Project Portfolio</h2>
+        <h2 className="display-5 mb-3">Project Portfolio</h2>
         <div className="d-grid gap-3">
           {projects.slice(0, 3).map((project, i) => <ProjectCard project={project} inverse={i % 2 === 1} />)}
         </div>
@@ -64,24 +67,26 @@ export default function Home() {
       </div>
 
       <div className="mt-5 d-flex flex-column">
-        <h2 className="mb-3">Technical Skills</h2>
+        <h2 className="display-5 mb-3">Technical Skills</h2>
         <h5 className="text-body-secondary pb-4 fw-light">
             I'm a formally trained computer scientist with experience in the following languages, frameworks, and technologies:
         </h5>
         <div className="d-grid gap-3" style={{fontSize: "3rem", gridTemplateColumns: "repeat(auto-fit, minmax(64px, 1fr))", justifyItems: "center"}}>
           {skills.map(skill => <Image src={`/skills/${skill}`} alt={skill} width={64} height={64} title={getSkillIconName(skill)} />)}
         </div>
-        <p className="fw-light text-secondary mt-3 mb-0 fst-italic">{
+        <span className="d-flex align-items-center justify-content-end text-secondary mt-1 gap-1 fw-lighter"><InfoCircle /> Icons from <Link href="https://skillicons.dev/">Skill Icons</Link></span>
+        <p className="fw-light text-secondary-emphasis my-3 text-center fst-italic">{
             `(${skills.map(skill => getSkillIconName(skill)).slice(0, skills.length - 1).join(', ')}, and ${getSkillIconName(skills.slice(-1)[0])})`
         }</p>
-        <span className="d-flex align-items-center text-secondary mt-3 gap-1 fw-lighter"><InfoCircle /> Icons from <Link href="https://skillicons.dev/">Skill Icons</Link></span>
         <Link href="/about" className="align-self-center mt-3">
           <button className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2">More About Me <ArrowRight/> </button>
         </Link>
       </div>
 
-      <div className="mt-5 d-flex flex-column">
-        <h2 className="mb-3">Work Experience</h2>
+      <div className="d-flex flex-column mt-5 mb-4">
+        <h2 className="display-5 mb-3">Education & Experience</h2>
+        {degrees.map(degree => <Education edu={degree} />)}
+        <span className="divider my-5"></span>
         {jobs.map(job => <WorkExperience job={job} />)}
         <Link href="/resume" className="align-self-center mt-3">
           <button className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2">View Resume <ArrowRight/> </button>

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import TypeIcon from "./TypeIcon";
-import { ArrowRight } from "react-bootstrap-icons";
+import { ArrowRight, BoxArrowUpRight } from "react-bootstrap-icons";
+import LinkIcon from "@/components/LinkIcon";
 
 export default function ProjectCard({project, inverse}){
 
@@ -16,15 +17,15 @@ export default function ProjectCard({project, inverse}){
                     </Link>
                 </div>
                 <div className={`col-${imgBreakpoint}-5 ${inverse ? `order-${imgBreakpoint}-1` : `order-${imgBreakpoint}-2`}`}>
-                    <div className={`px-1 px-${imgBreakpoint}-3 pb-1 pb-${imgBreakpoint}-3 pt-3`}>
+                    <div className={`px-1 px-${imgBreakpoint}-3 pb-1 pb-lg-3 pt-3`}>
                         <h3 className="fw-bold">{project.name}</h3>
-                        <h5 className="d-flex">
+                        <h5 className="d-flex mb-3">
                             <span className="badge rounded-pill text-bg-primary d-flex gap-1 align-items-center">
                                 <TypeIcon type={project.type.group} />
                                 {project.type.name}
                             </span>
                         </h5>
-                        <p className="lh-sm">
+                        <p className="lh-sm mb-2">
                             {project.description}
                         </p>
                         <Link href={`/portfolio/${project.pathname}`} className="fw-bold">Read more <ArrowRight /></Link>

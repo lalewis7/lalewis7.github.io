@@ -87,7 +87,7 @@ export default function RootLayout({ children }) {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link target="_blank" rel="noopener noreferrer" href={`mailto:${process.env.MEDIUM_LINK}`} className="nav-link d-inline-flex">
+                  <Link target="_blank" rel="noopener noreferrer" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} className="nav-link d-inline-flex">
                     <EnvelopeFill />
                   </Link>
                 </li>
@@ -108,19 +108,25 @@ export default function RootLayout({ children }) {
           <div className="container py-4">
             <div className="row row-gap-3">
               <div className={`col col-12 col-${footerBreakpoint}-6 col-lg-3 d-flex flex-column`}>
-                <h3 className="m-0">Arthur Lewis</h3>
-                <h6 className="mb-3 fw-light">Software Engineer</h6>
-                <span className="h4 d-inline-flex gap-4 ps-1">
-                  <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex">
-                    <Linkedin />
-                  </Link>
-                  <Link target="_blank" rel="noopener noreferrer" href={process.env.GITHUB_LINK} className="nav-link d-inline-flex">
-                    <Github />
-                  </Link>
-                  <Link target="_blank" rel="noopener noreferrer" href={process.env.MEDIUM_LINK} className="nav-link d-inline-flex">
-                    <Medium />
-                  </Link>
-                </span>
+                <div className="row">
+                  <div className="col col-md-12">
+                    <h3 className="m-0">Arthur Lewis</h3>
+                    <h6 className="mb-3 fw-light">Software Engineer</h6>
+                  </div>
+                  <div className="col d-flex align-items-center align-items-md-start">
+                    <span className="h4 d-inline-flex gap-4 ps-1">
+                      <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex">
+                        <Linkedin />
+                      </Link>
+                      <Link target="_blank" rel="noopener noreferrer" href={process.env.GITHUB_LINK} className="nav-link d-inline-flex">
+                        <Github />
+                      </Link>
+                      <Link target="_blank" rel="noopener noreferrer" href={process.env.MEDIUM_LINK} className="nav-link d-inline-flex">
+                        <Medium />
+                      </Link>
+                    </span>
+                  </div>
+                </div>
               </div>
               <div className={`col col-12 col-${footerBreakpoint}-6 col-lg-4`}>
                 <h4>Sitemap</h4>
@@ -155,31 +161,6 @@ export default function RootLayout({ children }) {
                   </div>
                 </div>
               </div>
-              {/* <div className="col">
-                <ul className="d-flex flex-wrap justify-content-center gap-4 h5 m-0">
-                  <li className="nav-item">
-                    <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex">
-                      <Linkedin />
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link target="_blank" rel="noopener noreferrer" href={process.env.GITHUB_LINK} className="nav-link d-inline-flex">
-                      <Github />
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link target="_blank" rel="noopener noreferrer" href={process.env.MEDIUM_LINK} className="nav-link d-inline-flex">
-                      <Medium />
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link target="_blank" rel="noopener noreferrer" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} className="nav-link d-inline-flex d-flex align-items-center gap-2">
-                      <EnvelopeFill />
-                      <span className="h6 m-0">{process.env.NEXT_PUBLIC_EMAIL}</span>
-                    </Link>
-                  </li>
-                </ul>
-              </div> */}
             </div>
           </div>
         </footer>

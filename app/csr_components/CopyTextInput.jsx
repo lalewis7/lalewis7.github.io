@@ -18,14 +18,17 @@ export default function CopyTextInput(){
 
     return <>
         <div>
-            <InputGroup className="mb-3">
+            <InputGroup>
                 <Form.Control
                     aria-label="Email"
+                    type="text"
+                    size="sm"
                     value={process.env.NEXT_PUBLIC_EMAIL}
+                    className={`border-light focus-ring focus-ring-light`}
                     readOnly
                 />
-                <Button variant="outline-secondary" onClick={copy}>
-                    <span className="h5">
+                <Button variant="outline-light" onClick={copy}>
+                    <span className="h5 lh-1">
                     {copied ? <ClipboardCheckFill /> : <Clipboard /> }
                     </span>
                 </Button>
