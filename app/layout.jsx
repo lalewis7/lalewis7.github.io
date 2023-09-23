@@ -17,7 +17,7 @@ const roboto_mono = Roboto_Mono({
   weight: ['400', '700']
 })
 
-const page_title = process.env.NAME
+const page_title = `${process.env.NAME} - Portfolio Website`
 const page_description = process.env.DESCRIPTION
 
 export const metadata = {
