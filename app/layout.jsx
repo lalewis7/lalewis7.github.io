@@ -3,7 +3,7 @@ import './globals.scss'
 import { Roboto, Roboto_Mono } from 'next/font/google'
 import HeaderOffcanvas from './csr_components/HeaderOffcanvas'
 import HeaderLink from './csr_components/HeaderLink'
-import { EnvelopeFill, FiletypePdf, Github, Linkedin, Medium } from 'react-bootstrap-icons'
+import { EnvelopeFill, FiletypePdf, Github, Linkedin, Medium, BoxArrowUpRight, UniversalAccessCircle } from 'react-bootstrap-icons'
 import Script from 'next/script'
 import CopyTextInput from './csr_components/CopyTextInput'
 
@@ -162,10 +162,19 @@ export default function RootLayout({ children }) {
                 </div>
               </div>
             </div>
-            <div className="row mt-2">
-              <div className="col">
-                <p className="text-secondary-emphasis">
+            <div className="row row-gap-1 mt-3">
+              <div className="col col-12 col-md-6">
+                <p className="text-secondary-emphasis m-0">
                 Lanceton Arthur Lewis II &copy; 2023
+                </p>
+              </div>
+              <div className="col col-12 col-md-6">
+                <p className="text-secondary-emphasis float-md-end m-0 d-inline-flex align-items-center gap-2">
+                  <UniversalAccessCircle />
+                  <span>This website is <Link target="_blank" rel="noopener noreferrer" href="https://accessibe.com/accessscan?website=arthurlewis.net" 
+                    tabIndex={0} className="text-reset text-decoration-underline link-offset-1" role="link" aria-label="View Resume in Google Drive">
+                      ADA-compliant
+                  </Link>.</span>
                 </p>
               </div>
             </div>
