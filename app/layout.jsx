@@ -109,8 +109,8 @@ export default function RootLayout({ children }) {
               <div className={`col col-12 col-${footerBreakpoint}-6 col-lg-3 d-flex flex-column`}>
                 <div className="row">
                   <div className="col col-md-12">
-                    <h3 className="m-0">Arthur Lewis</h3>
-                    <h6 className="mb-1 mb-sm-3 fw-light">Software Engineer</h6>
+                    <div className="h3 m-0">Arthur Lewis</div>
+                    <div className="h6 mb-1 mb-sm-3 fw-light">Software Engineer</div>
                   </div>
                   <div className="col d-flex align-items-center align-items-md-start">
                     <span className="h4 d-inline-flex gap-4 ps-1">
@@ -128,7 +128,7 @@ export default function RootLayout({ children }) {
                 </div>
               </div>
               <div className={`col col-12 col-${footerBreakpoint}-6 col-lg-4`}>
-                <h4>Sitemap</h4>
+                <div className="h4">Sitemap</div>
                 <div className="row">
                   <div className="col col-6 gap-2 d-flex flex-column">
                     <span className="d-flex"><Link href="/" className="text-reset fw-light d-inline-flex" tabIndex={0} role="link" aria-label="Home">Home</Link></span>
@@ -141,7 +141,7 @@ export default function RootLayout({ children }) {
                 </div>
               </div>
               <div className={`col col-12 col-${footerBreakpoint}-6 col-lg-2`}>
-                <h4>Resources</h4>
+                <div className="h4">Resources</div>
                 <div className="row">
                   <div className="col">
                     <span>
@@ -154,7 +154,7 @@ export default function RootLayout({ children }) {
                 </div>
               </div>
               <div className={`col col-12 col-${footerBreakpoint}-6 col-lg-3`}>
-                <h4>Contact</h4>
+                <div className="h4">Contact</div>
                 <div className="row">
                   <div className="col">
                     <CopyTextInput />
