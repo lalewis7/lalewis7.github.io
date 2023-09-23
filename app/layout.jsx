@@ -85,6 +85,11 @@ export default function RootLayout({ children }) {
                   </Link>
                 </li>
                 <li className="nav-item">
+                  <Link target="_blank" rel="noopener noreferrer" href={`mailto:${process.env.MEDIUM_LINK}`} className="nav-link d-inline-flex">
+                    <EnvelopeFill />
+                  </Link>
+                </li>
+                <li className="nav-item">
                   <Link target="_blank" rel="noopener noreferrer" href={process.env.MEDIUM_LINK} className="nav-link d-inline-flex">
                     <Medium />
                   </Link>

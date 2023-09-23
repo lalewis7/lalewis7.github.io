@@ -8,7 +8,7 @@ import jobs from "@/config/work.json";
 // @ts-ignore
 import skills from "@/config/skills.json";
 import ProjectCard from "./components/ProjectCard";
-import { ArrowRight, FileEarmarkPdfFill, FiletypePdf, Github, InfoCircle, Linkedin, Medium } from "react-bootstrap-icons";
+import { ArrowRight, EnvelopeFill, FileEarmarkPdfFill, Github, InfoCircle, Linkedin, Medium } from "react-bootstrap-icons";
 import { getSkillIconName } from "./util";
 import WorkExperience from "./components/WorkExperience";
 import styles from "./page.module.scss";
@@ -32,6 +32,9 @@ export default function Home() {
             </Link>
             <Link target="_blank" rel="noopener noreferrer" href={process.env.GITHUB_LINK} className="nav-link d-inline-flex">
               <Github />
+            </Link>
+            <Link target="_blank" rel="noopener noreferrer" href={`mailto:${process.env.EMAIL}`} className="nav-link d-inline-flex">
+              <EnvelopeFill />
             </Link>
             <Link target="_blank" rel="noopener noreferrer" href={process.env.MEDIUM_LINK} className="nav-link d-inline-flex">
               <Medium />
@@ -69,7 +72,7 @@ export default function Home() {
           {skills.map(skill => <Image src={`/skills/${skill}`} alt={skill} width={64} height={64} title={getSkillIconName(skill)} />)}
         </div>
         <p className="fw-light text-secondary mt-3 mb-0 fst-italic">{
-            `(${skills.map(skill => getSkillIconName(skill)).splice(0, skills.length - 1).join(', ')}, and ${getSkillIconName(skills.splice(-1)[0])})`
+            `(${skills.map(skill => getSkillIconName(skill)).slice(0, skills.length - 1).join(', ')}, and ${getSkillIconName(skills.slice(-1)[0])})`
         }</p>
         <span className="d-flex align-items-center text-secondary mt-3 gap-1 fw-lighter"><InfoCircle /> Icons from <Link href="https://skillicons.dev/">Skill Icons</Link></span>
         <Link href="/about" className="align-self-center mt-3">

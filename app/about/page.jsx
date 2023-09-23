@@ -70,7 +70,7 @@ export default function About(){
                     {skills.map(skill => <Image src={`/skills/${skill}`} alt={skill} width={64} height={64} title={getSkillIconName(skill)} />)}
                 </div>
                 <p className="fw-light text-secondary mt-3 mb-0 fst-italic">{
-                    `(${skills.map(skill => getSkillIconName(skill)).splice(0, skills.length - 1).join(', ')}, and ${getSkillIconName(skills.splice(-1)[0])})`
+                    `(${skills.map(skill => getSkillIconName(skill)).slice(0, skills.length - 1).join(', ')}, and ${getSkillIconName(skills.slice(-1)[0])})`
                 }</p>
                 <span className="d-flex align-items-center text-secondary mt-3 gap-1 fw-lighter"><InfoCircle /> Icons from <Link href="https://skillicons.dev/">Skill Icons</Link></span>
             </div>
