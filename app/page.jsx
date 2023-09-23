@@ -33,7 +33,7 @@ export default function Home() {
             <Link target="_blank" rel="noopener noreferrer" href={process.env.GITHUB_LINK} className="nav-link d-inline-flex">
               <Github />
             </Link>
-            <Link target="_blank" rel="noopener noreferrer" href={`mailto:${process.env.EMAIL}`} className="nav-link d-inline-flex">
+            <Link target="_blank" rel="noopener noreferrer" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} className="nav-link d-inline-flex">
               <EnvelopeFill />
             </Link>
             <Link target="_blank" rel="noopener noreferrer" href={process.env.MEDIUM_LINK} className="nav-link d-inline-flex">

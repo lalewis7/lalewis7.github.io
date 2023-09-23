@@ -36,7 +36,7 @@ export default function Resume(){
                     width: "100%",
                     paddingTop: "128%"
                 }}>
-                    <iframe src={`https://drive.google.com/file/d/${process.env.RESUME_GDRIVE_ID}/preview`} allow="autoplay" style={{
+                    <iframe src={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}/preview`} allow="autoplay" style={{
                         position: "absolute",
                         top: 0,
                         left: 0,

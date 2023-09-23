@@ -6,6 +6,7 @@ import HeaderLink from './csr_components/HeaderLink'
 import { EnvelopeFill, FiletypePdf, Github, Linkedin, Medium } from 'react-bootstrap-icons'
 import Script from 'next/script'
 import Head from 'next/head'
+import CopyTextInput from './csr_components/CopyTextInput'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -42,7 +43,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 
-  const mobileBreakpoint = "md"
+  const mobileBreakpoint = "lg"
+  const footerBreakpoint = "md"
 
   return (
     <html lang="en">
@@ -104,8 +106,56 @@ export default function RootLayout({ children }) {
         </main>
         <footer className="mt-5">
           <div className="container py-4">
-            <div className="row">
-              <div className="col">
+            <div className="row row-gap-3">
+              <div className={`col col-12 col-${footerBreakpoint}-6 col-lg-3 d-flex flex-column`}>
+                <h3 className="m-0">Arthur Lewis</h3>
+                <h6 className="mb-3 fw-light">Software Engineer</h6>
+                <span className="h4 d-inline-flex gap-4 ps-1">
+                  <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex">
+                    <Linkedin />
+                  </Link>
+                  <Link target="_blank" rel="noopener noreferrer" href={process.env.GITHUB_LINK} className="nav-link d-inline-flex">
+                    <Github />
+                  </Link>
+                  <Link target="_blank" rel="noopener noreferrer" href={process.env.MEDIUM_LINK} className="nav-link d-inline-flex">
+                    <Medium />
+                  </Link>
+                </span>
+              </div>
+              <div className={`col col-12 col-${footerBreakpoint}-6 col-lg-4`}>
+                <h4>Sitemap</h4>
+                <div className="row">
+                  <div className="col col-6 gap-2 d-flex flex-column">
+                    <span className="d-flex"><Link href="/" className="text-reset fw-light d-inline-flex">Home</Link></span>
+                    <span className="d-flex"><Link href="/portfolio" className="text-reset fw-light d-inline-flex">Projects</Link></span>
+                  </div>
+                  <div className="col col-6 gap-2 d-flex flex-column">
+                    <span className="d-flex"><Link href="/about" className="text-reset fw-light d-inline-flex">About</Link></span>
+                    <span className="d-flex"><Link href="/resume" className="text-reset fw-light d-inline-flex">Resume</Link></span>
+                  </div>
+                </div>
+              </div>
+              <div className={`col col-12 col-${footerBreakpoint}-6 col-lg-2`}>
+                <h4>Resources</h4>
+                <div className="row">
+                  <div className="col">
+                    <span>
+                      <Link target="_blank" rel="noopener noreferrer" href={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}/view?usp=sharing`} className="text-reset fw-light d-inline-flex align-items-center">
+                        Resume<FiletypePdf className="ms-1" />
+                      </Link>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={`col col-12 col-${footerBreakpoint}-6 col-lg-3`}>
+                <h4>Contact</h4>
+                <div className="row">
+                  <div className="col">
+                    <CopyTextInput />
+                  </div>
+                </div>
+              </div>
+              {/* <div className="col">
                 <ul className="d-flex flex-wrap justify-content-center gap-4 h5 m-0">
                   <li className="nav-item">
                     <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex">
@@ -123,13 +173,13 @@ export default function RootLayout({ children }) {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link target="_blank" rel="noopener noreferrer" href={`mailto:${process.env.EMAIL}`} className="nav-link d-inline-flex d-flex align-items-center gap-2">
+                    <Link target="_blank" rel="noopener noreferrer" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} className="nav-link d-inline-flex d-flex align-items-center gap-2">
                       <EnvelopeFill />
-                      <span className="h6 m-0">{process.env.EMAIL}</span>
+                      <span className="h6 m-0">{process.env.NEXT_PUBLIC_EMAIL}</span>
                     </Link>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </footer>

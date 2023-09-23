@@ -53,7 +53,7 @@ export default function About(){
                 </p>
                 <p>
                 I am looking to contribute my skills to a team of other technology enthusiasts who are committed to solving problems. If you're interested in chatting about software engineering or how I might contribute to your technology needs,
-                {' '}email me at <Link href={`mailto:${process.env.EMAIL}`}>{process.env.EMAIL}</Link>{' '}
+                {' '}email me at <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>{process.env.NEXT_PUBLIC_EMAIL}</Link>{' '}
                 or connect with me on{' '}
                 <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="d-inline-flex align-items-center gap-1">
                     LinkedIn<BoxArrowUpRight />

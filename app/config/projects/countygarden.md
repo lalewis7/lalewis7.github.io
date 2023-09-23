@@ -8,7 +8,7 @@ County Garden is a MySQL Relational Database for an insurance company, County Ga
 
 I used [Mockaroo](https://www.mockaroo.com/) to generate most of my data while doing some manual entry.
 
-### User Interface 
+### 📱 User Interface 
 
 My interface uses menus to allow the user to navigate the data, when viewing any particular piece of data options will appear at the bottom for further navigation.
 For example when on the customer view you can either view all customers, view a single customer, or return to the select interface menu.
