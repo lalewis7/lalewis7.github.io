@@ -25,12 +25,11 @@ export const metadata = {
 
 export default function About(){
     return <>
-        <Script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" />
         <div className="max-w-lg mx-auto">
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item">
-                        <Link href="/">
+                        <Link href="/" tabIndex={0} role="link" aria-label="Home">
                             Home
                         </Link>
                     </li>
@@ -40,7 +39,7 @@ export default function About(){
             <div>
                 <h1 className="d-inline-flex">About Me</h1>
                 <div className="float-md-end text-center p-3">
-                    <Image src="/self.jpg" alt="Arthur" width={260} height={260} className="rounded-circle" />
+                    <Image src="/self.jpg" alt={`${process.env.NAME} Headshot`} width={260} height={260} className="rounded-circle" />
                 </div>
                 <p>
                 Hi there! My name is Arthur Lewis, and I am a creative, dynamic, and meticulous full-stack software engineer with a passion for facilitating positive change through my work.
@@ -53,9 +52,10 @@ export default function About(){
                 </p>
                 <p>
                 I am looking to contribute my skills to a team of other technology enthusiasts who are committed to solving problems. If you're interested in chatting about software engineering or how I might contribute to your technology needs,
-                {' '}email me at <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>{process.env.NEXT_PUBLIC_EMAIL}</Link>{' '}
+                {' '}email me at <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} tabIndex={0} role="link" aria-label="Email">{process.env.NEXT_PUBLIC_EMAIL}</Link>{' '}
                 or connect with me on{' '}
-                <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="d-inline-flex align-items-center gap-1">
+                <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="d-inline-flex align-items-center gap-1"
+                    tabIndex={0} role="link" aria-label="LinkedIn">
                     LinkedIn<BoxArrowUpRight />
                 </Link>.
                 </p>
@@ -69,7 +69,9 @@ export default function About(){
                 <div className="d-grid gap-3" style={{fontSize: "3rem", gridTemplateColumns: "repeat(auto-fit, minmax(64px, 1fr))", justifyItems: "center"}}>
                     {skills.map(skill => <Image src={`/skills/${skill}`} alt={skill} width={64} height={64} title={getSkillIconName(skill)} />)}
                 </div>
-                <span className="d-flex align-items-center justify-content-end text-secondary mt-1 gap-1 fw-lighter"><InfoCircle /> Icons from <Link href="https://skillicons.dev/">Skill Icons</Link></span>
+                <span className="d-flex align-items-center justify-content-end text-secondary-emphasis mt-1 gap-1 fw-lighter">
+                    <InfoCircle /> Icons from <Link href="https://skillicons.dev/" tabIndex={-1} role="link" aria-label="Skill Icons">Skill Icons</Link>
+                </span>
                 <p className="fw-light text-secondary-emphasis my-3 text-center fst-italic">{
                     `(${skills.map(skill => getSkillIconName(skill)).slice(0, skills.length - 1).join(', ')}, and ${getSkillIconName(skills.slice(-1)[0])})`
                 }</p>

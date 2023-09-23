@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ResumePreview from "./ResumePreview";
 
-const page_title = 'Resume - Arthur Lewis'
+const page_title = `Resume - ${process.env.NAME}`
 
 export const metadata = {
     title: page_title,
@@ -20,7 +20,7 @@ export default function Resume(){
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item">
-                        <Link href="/">
+                        <Link href="/" tabIndex={0} role="link" aria-label="Home">
                             Home
                         </Link>
                     </li>

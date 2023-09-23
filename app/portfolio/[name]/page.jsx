@@ -1,7 +1,7 @@
 import Link from "next/link"
 // @ts-ignore
 import project_data from "@/config/projects.json";
-import { BoxArrowUpRight, Github, GlobeAmericas, Medium, PlayBtn } from "react-bootstrap-icons";
+import { BoxArrowUpRight } from "react-bootstrap-icons";
 // markdown -> html
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import path from 'path';
@@ -19,7 +19,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }){
     const project = project_data.find(prj => prj.pathname === params.name.toLowerCase())
 
-    const page_title = `${project.name} - Arthur Lewis Project Portfolio`
+    const page_title = `${project.name} - ${process.env.NAME} Project Portfolio`
     const page_description = `Find out more about ${project.name}, a ${project.type.name}, using ${project.skills.slice(0, project.skills.length-1).join(', ')}, and ${project.skills.slice(-1)}.`
 
     return project ? {
@@ -71,12 +71,12 @@ export default async function Project({ params }){
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item">
-                        <Link href="/">
+                        <Link href="/" tabIndex={0} role="link" aria-label="Home">
                             Home
                         </Link>
                     </li>
                     <li className="breadcrumb-item">
-                        <Link href="/portfolio">
+                        <Link href="/portfolio" tabIndex={0} role="link" aria-label="Projects">
                             Projects
                         </Link>
                     </li>
@@ -91,7 +91,7 @@ export default async function Project({ params }){
                     {project.type.name}
                 </span>
                 {project.links.map(link => <>
-                    <Link href={link.link} className="text-decoration-none" target="_blank" rel="noopener noreferrer">
+                    <Link href={link.link} className="text-decoration-none" target="_blank" rel="noopener noreferrer" tabIndex={0} role="link" aria-label={link.name}>
                         <span className="badge rounded-pill text-bg-primary d-flex gap-2 align-items-center">
                             <LinkIcon name={link.name} />
                             {link.name}

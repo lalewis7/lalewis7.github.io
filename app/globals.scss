@@ -96,7 +96,7 @@ $card-border-width: 0px;
 }
 
 a{
-    color: $blue-500;
+    color: $blue-300;
     text-decoration: none;
     &:hover{
         // color: tint-color($primary, 25%);
@@ -152,4 +152,8 @@ pre{
     outline: 0;
     // By default, there is no `--bs-focus-ring-x`, `--bs-focus-ring-y`, or `--bs-focus-ring-blur`, but we provide CSS variables with fallbacks to initial `0` values
     box-shadow: var(--#{$prefix}focus-ring-x, 0) var(--#{$prefix}focus-ring-y, 0) var(--#{$prefix}focus-ring-blur, 0) var(--#{$prefix}focus-ring-width) var(--#{$prefix}focus-ring-color);
+}
+
+.btn:hover{
+    text-decoration: none;
 }

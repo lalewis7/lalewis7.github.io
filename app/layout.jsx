@@ -5,7 +5,6 @@ import HeaderOffcanvas from './csr_components/HeaderOffcanvas'
 import HeaderLink from './csr_components/HeaderLink'
 import { EnvelopeFill, FiletypePdf, Github, Linkedin, Medium } from 'react-bootstrap-icons'
 import Script from 'next/script'
-import Head from 'next/head'
 import CopyTextInput from './csr_components/CopyTextInput'
 
 const roboto = Roboto({
@@ -18,19 +17,19 @@ const roboto_mono = Roboto_Mono({
   weight: ['400', '700']
 })
 
-const page_title = 'Arthur Lewis'
-const page_description = 'Hi! My name is Arthur Lewis, and my mission is to design and create software using the latest frameworks and technologies to positively impact people.'
+const page_title = process.env.NAME
+const page_description = process.env.DESCRIPTION
 
 export const metadata = {
   title: page_title,
   description: page_description,
   metadataBase: new URL(process.env.METADATA_BASE),
-  keywords: ['Lanceton', 'Arthur', 'Lewis', 'Portfolio', 'Resume', 'LinkedIn', 'GitHub', 'Medium', 'NJ', 'Lehigh'],
+  keywords: process.env.KEYWORDS.split(","),
   openGraph: {
     title: page_title,
     description: page_description,
     url: process.env.METADATA_BASE,
-    siteName: 'Arthur Lewis',
+    siteName: process.env.name,
     locale: 'en_US',
     type: 'website'
   },
@@ -61,7 +60,7 @@ export default function RootLayout({ children }) {
         <header className={`navbar navbar-expand-${mobileBreakpoint} fixed-top`}>
           <nav className="container">
             <Link href="/" className={`navbar-brand ${roboto_mono.className}`}>
-              &lt; Arthur Lewis &#47;&gt;
+              &lt; {process.env.NAME} &#47;&gt;
             </Link>
             <div className={`d-none d-${mobileBreakpoint}-block navbar-collapse`}>
               <ul className="navbar-nav">
@@ -164,7 +163,7 @@ export default function RootLayout({ children }) {
             </div>
             <div className="row mt-2">
               <div className="col">
-                <p className="text-secondary">
+                <p className="text-secondary-emphasis">
                 Lanceton Arthur Lewis II &copy; 2023
                 </p>
               </div>

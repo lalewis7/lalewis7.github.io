@@ -21,34 +21,34 @@ export default function Home() {
     <div className="max-w-lg mx-auto pt-4">
       <div className={styles.landing_page_h_100}>
         <div>
-          <h1 className="display-1 fw-bold">Arthur Lewis</h1>
+          <h1 className="display-1 fw-bold" tabIndex={0}>{process.env.NAME}</h1>
           <h2 className="display-5 text-body-secondary"><Typed strings={["Software Engineer", "Creative Solutionist", "Fitness Enthusiast", "Meticulous Designer"]} /></h2>
-          <h4 className="text-body-secondary mb-4 mt-3 fw-light">
+          <h4 className="text-body-secondary mb-4 mt-3 fw-light" tabIndex={0}>
             My mission is to design and create software using the latest frameworks and technologies to positively impact people.
           </h4>
-          <h4 className="d-inline-flex gap-4 mb-4 ps-1">
-            <Link href="/resume" className="nav-link d-flex align-items-center gap-2 lh-1">
+          <div className="h4 d-inline-flex gap-4 mb-4 ps-1">
+            <Link href="/resume" className="nav-link d-flex align-items-center gap-2 lh-1" tabIndex={0} role="link" aria-label="Resume">
               <FileEarmarkPdfFill className="ms-1" />Resume
             </Link>
-            <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex">
+            <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="LinkedIn">
               <Linkedin />
             </Link>
-            <Link target="_blank" rel="noopener noreferrer" href={process.env.GITHUB_LINK} className="nav-link d-inline-flex">
+            <Link target="_blank" rel="noopener noreferrer" href={process.env.GITHUB_LINK} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="GitHub">
               <Github />
             </Link>
-            <Link target="_blank" rel="noopener noreferrer" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} className="nav-link d-inline-flex">
+            <Link target="_blank" rel="noopener noreferrer" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="Email">
               <EnvelopeFill />
             </Link>
-            <Link target="_blank" rel="noopener noreferrer" href={process.env.MEDIUM_LINK} className="nav-link d-inline-flex">
+            <Link target="_blank" rel="noopener noreferrer" href={process.env.MEDIUM_LINK} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="Medium">
               <Medium />
             </Link>
-          </h4>
+          </div>
           <div className="d-flex flex-wrap gap-2 mt-2" style={{marginBottom: "6rem"}}>
-            <Link href="/about">
-              <button className="btn btn-primary btn-lg rounded-5">Learn More</button>
+            <Link href="/about" role="link" aria-label="About" className="btn btn-primary btn-lg rounded-5">
+              Learn More
             </Link>
-            <Link href="/portfolio">
-              <button className="btn btn-primary btn-lg rounded-5">See My Work</button>
+            <Link href="/portfolio" role="link" aria-label="Resume" className="btn btn-primary btn-lg rounded-5"> 
+              See My Work
             </Link>
           </div>
         </div>
@@ -61,8 +61,8 @@ export default function Home() {
         <div className="d-grid gap-3">
           {projects.slice(0, 3).map((project, i) => <ProjectCard project={project} inverse={i % 2 === 1} />)}
         </div>
-        <Link href="/portfolio" className="align-self-center mt-3">
-          <button className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2">View All Projects <ArrowRight/> </button>
+        <Link href="/portfolio" className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2 align-self-center mt-3" tabIndex={0} role="link" aria-label="View All Projects">
+          View All Projects <ArrowRight/>
         </Link>
       </div>
 
@@ -74,12 +74,14 @@ export default function Home() {
         <div className="d-grid gap-3" style={{fontSize: "3rem", gridTemplateColumns: "repeat(auto-fit, minmax(64px, 1fr))", justifyItems: "center"}}>
           {skills.map(skill => <Image src={`/skills/${skill}`} alt={skill} width={64} height={64} title={getSkillIconName(skill)} />)}
         </div>
-        <span className="d-flex align-items-center justify-content-end text-secondary mt-1 gap-1 fw-lighter"><InfoCircle /> Icons from <Link href="https://skillicons.dev/">Skill Icons</Link></span>
+        <span className="d-flex align-items-center justify-content-end text-secondary-emphasis mt-1 gap-1 fw-lighter">
+          <InfoCircle /> Icons from <Link href="https://skillicons.dev/" tabIndex={-1} role="link" aria-label="Skill Icons">Skill Icons</Link>
+        </span>
         <p className="fw-light text-secondary-emphasis my-3 text-center fst-italic">{
             `(${skills.map(skill => getSkillIconName(skill)).slice(0, skills.length - 1).join(', ')}, and ${getSkillIconName(skills.slice(-1)[0])})`
         }</p>
-        <Link href="/about" className="align-self-center mt-3">
-          <button className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2">More About Me <ArrowRight/> </button>
+        <Link href="/about" className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2 align-self-center mt-3" tabIndex={0} role="link" aria-label="More About Me">
+          More About Me <ArrowRight/>
         </Link>
       </div>
 
@@ -88,8 +90,8 @@ export default function Home() {
         {degrees.map(degree => <Education edu={degree} />)}
         <span className="divider my-5"></span>
         {jobs.map(job => <WorkExperience job={job} />)}
-        <Link href="/resume" className="align-self-center mt-3">
-          <button className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2">View Resume <ArrowRight/> </button>
+        <Link href="/resume" className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2 align-self-center mt-3" tabIndex={0} role="link" aria-label="View Resume">
+          View Resume <ArrowRight/>
         </Link>
       </div>
 
