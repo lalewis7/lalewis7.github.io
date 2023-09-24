@@ -3,18 +3,19 @@
 import React from "react";
 import Typed from "typed.js";
 
-export default function TypedComponent(props){
+export default function TypedComponent({ strings }){
     // Create reference to store the DOM element containing the animation
     const el = React.useRef(null);
 
     React.useEffect(() => {
         const typed = new Typed(el.current, {
-            strings: props.strings,
+            strings: [...strings.slice(0, strings.length-1)],
             typeSpeed: 50,
             loop: true,
             backDelay: 1200,
-            backSpeed: 20,
-            smartBackspace: false
+            backSpeed: 30,
+            smartBackspace: false,
+            onLastStringBackspaced: () => typed.strPos = 0
         });
 
         return () => {
@@ -24,6 +25,6 @@ export default function TypedComponent(props){
     }, []);
 
     return <>
-        <span ref={el} />
+        <span ref={el} >{strings.slice(-1)}</span>
     </>;
 }

@@ -22,7 +22,10 @@ export default function Home() {
       <div className={styles.landing_page_h_100}>
         <div>
           <h1 className="display-1 fw-bold" tabIndex={0}>{process.env.NEXT_PUBLIC_NAME}</h1>
-          <h2 className="display-5 text-body-secondary"><Typed strings={["Software Engineer", "Creative Solutionist", "Fitness Enthusiast", "Meticulous Designer"]} /></h2>
+          <h2 className={`display-5 text-body-secondary`}>
+            <noscript>Software Engineer</noscript>
+            <Typed strings={[ "Creative Solutionist", "Fitness Enthusiast", "Meticulous Designer", "Software Engineer"]} />&nbsp;
+          </h2>
           <h4 className="text-body-secondary mb-4 mt-3 fw-light" tabIndex={0}>
             My mission is to design and create software using the latest frameworks and technologies to positively impact people.
           </h4>
