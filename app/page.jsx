@@ -48,7 +48,7 @@ export default function Home() {
           </div>
           <div className="d-flex flex-wrap gap-2 mt-2" style={{marginBottom: "4rem"}}>
             <Link href="/about" role="link" aria-label="About" className="btn btn-primary btn-lg rounded-5">
-              Learn More
+              About Me
             </Link>
             <Link href="/portfolio" role="link" aria-label="Resume" className="btn btn-primary btn-lg rounded-5"> 
               See My Work
