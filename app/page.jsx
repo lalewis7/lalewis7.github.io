@@ -26,7 +26,7 @@ export default function Home() {
           <h4 className="text-body-secondary mb-4 mt-3 fw-light" tabIndex={0}>
             My mission is to design and create software using the latest frameworks and technologies to positively impact people.
           </h4>
-          <div className="h4 d-inline-flex gap-4 mb-4 ps-1">
+          <div className="h4 d-inline-flex gap-4 mb-4 ps-1 flex-wrap">
             <Link href="/resume" className="nav-link d-flex align-items-center gap-2 lh-1" tabIndex={0} role="link" aria-label="Resume">
               <FileEarmarkPdfFill className="ms-1" />Resume
             </Link>
@@ -43,7 +43,7 @@ export default function Home() {
               <Medium />
             </Link>
           </div>
-          <div className="d-flex flex-wrap gap-2 mt-2" style={{marginBottom: "6rem"}}>
+          <div className="d-flex flex-wrap gap-2 mt-2" style={{marginBottom: "4rem"}}>
             <Link href="/about" role="link" aria-label="About" className="btn btn-primary btn-lg rounded-5">
               Learn More
             </Link>
@@ -54,7 +54,7 @@ export default function Home() {
         </div>
       </div>
 
-      <span className="divider"></span>
+      <hr className="diamond" />
 
       <div className="d-flex flex-column" style={{marginTop: "5rem"}}>
         <h2 className="display-5 mb-3">Project Portfolio</h2>

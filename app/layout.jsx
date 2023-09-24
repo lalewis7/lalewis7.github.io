@@ -3,7 +3,7 @@ import './globals.scss'
 import { Roboto, Roboto_Mono } from 'next/font/google'
 import HeaderOffcanvas from './csr_components/HeaderOffcanvas'
 import HeaderLink from './csr_components/HeaderLink'
-import { EnvelopeFill, FiletypePdf, Github, Linkedin, Medium, BoxArrowUpRight, UniversalAccessCircle } from 'react-bootstrap-icons'
+import { EnvelopeFill, FiletypePdf, Github, Linkedin, Medium, BoxArrowUpRight, UniversalAccessCircle, FileEarmarkPdfFill } from 'react-bootstrap-icons'
 import Script from 'next/script'
 import CopyTextInput from './csr_components/CopyTextInput'
 
@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
                 </li>
                 <li className="nav-item">
                   <Link href="/resume" className="nav-link d-flex align-items-center">
-                    Resume<FiletypePdf className="ms-1" />
+                    Resume
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -145,9 +145,10 @@ export default function RootLayout({ children }) {
                 <div className="row">
                   <div className="col">
                     <span>
-                      <Link target="_blank" rel="noopener noreferrer" href={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}/view?usp=sharing`} 
-                        className="text-reset fw-light d-inline-flex align-items-center" tabIndex={0} role="link" aria-label="View Resume in Google Drive">
-                        Resume<FiletypePdf className="ms-1" />
+                      <Link href={`https://drive.google.com/uc?export=download&id=${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}`} 
+                        download={`${process.env.NEXT_PUBLIC_NAME.split(" ").join("_")}_Resume.pdf`}
+                        className="text-reset fw-light d-inline-flex align-items-center" tabIndex={0} role="link" aria-label="Download Resume">
+                        Resume<FileEarmarkPdfFill className="ms-1" />
                       </Link>
                     </span>
                   </div>

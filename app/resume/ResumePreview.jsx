@@ -7,20 +7,20 @@ export default function(){
     const [loading, setLoading] = useState(true);
 
     return <>
-        { loading ? <>
-            <div className="text-center pt-5">
-                <div className="spinner-border" style={{width: "3rem", height: "3rem"}} role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </div>
-            </div>
-        </> : <></> }
         <div style={{
             position: "relative",
             overflow: "hidden",
             width: "100%",
             paddingTop: "128%",
-            visibility: loading ? "hidden" : "visible"
+            backgroundColor: "#313131"
         }}>
+            { loading ? <>
+                <div className="text-center pt-5 w-100 top-0 position-absolute">
+                    <div className="spinner-border" style={{width: "3rem", height: "3rem"}} role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </> : <></> }
             <iframe src={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}/preview`} title="Resume Preview" allow="autoplay" style={{
                 position: "absolute",
                 top: 0,
@@ -28,7 +28,8 @@ export default function(){
                 bottom: 0,
                 right: 0,
                 width: "100%",
-                height: "100%"
+                height: "100%",
+                visibility: loading ? "hidden" : "visible"
             }} onLoad={() => setLoading(false)}></iframe>
         </div>
     </>

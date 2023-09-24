@@ -62,7 +62,7 @@ export default function About(){
             </div>
             <div className="mb-4 mt-5">
                 {/* <h2>Skills</h2> */}
-                <hr className="pb-4" />
+                <hr className="mb-5 diamond" />
                 <p className="pb-4">
                     I'm a formally trained computer scientist with experience in the following languages, frameworks, and technologies:
                 </p>

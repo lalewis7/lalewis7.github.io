@@ -157,3 +157,30 @@ pre{
 .btn:hover{
     text-decoration: none;
 }
+
+hr.diamond{
+    background: $body-secondary-color-dark;
+    border: 0;
+    border-radius: 0.375rem;
+    height: 2px;
+    width: 40%;
+    position: relative;
+    margin: 30px auto;
+    overflow: visible;
+    opacity: 1;
+    &::before{
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: $body-secondary-color-dark;
+        display: inline-block;
+        border: 2px solid $body-secondary-color-dark;
+        position: absolute;
+        top: -7px;
+        left: 50%;
+        margin: 0 0 0 -8px;
+        transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+}

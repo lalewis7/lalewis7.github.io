@@ -33,7 +33,7 @@ export default function Portfolio(){
                     <li className="breadcrumb-item active" aria-current="page">Projects</li>
                 </ol>
             </nav>
-            <h1 className="display-4">Project Portfolio</h1>
+            <h1 className="display-4 mb-3">Project Portfolio</h1>
             <div className="d-grid gap-3">
                 {projects.map((project, i) => <ProjectCard project={project} inverse={i % 2 === 1} />)}
             </div>
