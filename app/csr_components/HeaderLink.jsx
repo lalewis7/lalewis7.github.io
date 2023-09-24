@@ -8,7 +8,7 @@ export default function HeaderLink(props){
     const pathname = usePathname()
 
     return <>
-        <Link className={`nav-link ${pathname.startsWith(props.route) ? "active" : ""}`} href={props.route}>
+        <Link className={`nav-link ${pathname.startsWith(props.route) ? "active" : ""}`} href={props.route} tabIndex={0} role="link" aria-label={props.label}>
             {props.label}
         </Link>
     </>

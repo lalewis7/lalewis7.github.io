@@ -71,9 +71,7 @@ export default function RootLayout({ children }) {
                   <HeaderLink label="Projects" route="/portfolio" />
                 </li>
                 <li className="nav-item">
-                  <Link href="/resume" className="nav-link d-flex align-items-center">
-                    Resume
-                  </Link>
+                  <HeaderLink label="Resume" route="/resume" />
                 </li>
                 <div style={{width: "1px"}} className="d-flex align-items-center">
                   <div className="vr">
