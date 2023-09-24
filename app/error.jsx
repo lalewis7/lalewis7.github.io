@@ -1,6 +1,8 @@
+"use client" // Error components must be Client Components
+
 import Link from "next/link";
 
-export default function NotFound(){
+export default function Error(){
     return <>
         <div className="container">
             <h1 className="display-4">500: Internal Server Error</h1>
