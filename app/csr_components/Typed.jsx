@@ -24,7 +24,8 @@ export default function TypedComponent({ strings }){
 
         return () => {
             // Destroy Typed instance during cleanup to stop animation
-            typed.destroy();
+            if (typed)
+                typed.destroy();
         };
     }, []);
 
