@@ -75,6 +75,11 @@ export default function RootLayout({ children }) {
                     Resume
                   </Link>
                 </li>
+                <div style={{width: "1px"}} className="d-flex align-items-center">
+                  <div className="vr">
+
+                  </div>
+                </div>
                 <li className="nav-item">
                   <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="LinkedIn">
                     <Linkedin />
