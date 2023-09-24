@@ -8,15 +8,19 @@ export default function TypedComponent({ strings }){
     const el = React.useRef(null);
 
     React.useEffect(() => {
-        const typed = new Typed(el.current, {
-            strings: [...strings.slice(0, strings.length-1)],
-            typeSpeed: 50,
-            loop: true,
-            backDelay: 1200,
-            backSpeed: 30,
-            smartBackspace: false,
-            onLastStringBackspaced: () => typed.strPos = 0
-        });
+        let typed
+
+        setTimeout(() => {
+            typed = new Typed(el.current, {
+                strings: [...strings.slice(0, strings.length-1)],
+                typeSpeed: 50,
+                loop: true,
+                backDelay: 1200,
+                backSpeed: 30,
+                smartBackspace: false,
+                onLastStringBackspaced: () => typed.strPos = 0
+            });
+        }, 1000)
 
         return () => {
             // Destroy Typed instance during cleanup to stop animation
