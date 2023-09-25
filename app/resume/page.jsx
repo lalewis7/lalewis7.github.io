@@ -31,11 +31,11 @@ export default function Resume(){
             <div className="d-flex justify-content-between align-items-center mb-3">
                 <h1 className="display-4 m-0">Resume</h1>
                 <div>
-                    <Link href={`https://drive.google.com/uc?export=download&id=${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}`} 
+                    <a href={`https://drive.google.com/uc?export=download&id=${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}`} 
                         download={`${process.env.NEXT_PUBLIC_NAME.split(" ").join("_")}_Resume.pdf`} 
                         className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2" tabIndex={0} role="link" aria-label="Download Resume">
                             Download<Download />
-                    </Link>
+                    </a>
                 </div>
             </div>
             <ResumePreview />

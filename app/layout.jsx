@@ -3,7 +3,7 @@ import './globals.scss'
 import { Roboto, Roboto_Mono } from 'next/font/google'
 import HeaderOffcanvas from './csr_components/HeaderOffcanvas'
 import HeaderLink from './csr_components/HeaderLink'
-import { EnvelopeFill, FiletypePdf, Github, Linkedin, Medium, BoxArrowUpRight, UniversalAccessCircle, FileEarmarkPdfFill } from 'react-bootstrap-icons'
+import { EnvelopeFill, FiletypePdf, Github, Linkedin, Medium, BoxArrowUpRight, UniversalAccessCircle, FileEarmarkPdfFill, AwardFill, FileEarmarkMedicalFill } from 'react-bootstrap-icons'
 import Script from 'next/script'
 import CopyTextInput from './csr_components/CopyTextInput'
 
@@ -145,14 +145,22 @@ export default function RootLayout({ children }) {
               </div>
               <div className={`col col-12 col-${footerBreakpoint}-6 col-lg-2`}>
                 <div className="h4">Resources</div>
-                <div className="row">
-                  <div className="col">
+                <div className="row row-gap-2">
+                  <div className="col col-lg-12">
                     <span>
-                      <Link href={`https://drive.google.com/uc?export=download&id=${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}`} 
+                      <a href={`https://drive.google.com/uc?export=download&id=${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}`} 
                         download={`${process.env.NEXT_PUBLIC_NAME.split(" ").join("_")}_Resume.pdf`}
                         className="text-reset fw-light d-inline-flex align-items-center" tabIndex={0} role="link" aria-label="Download Resume">
                         Resume<FileEarmarkPdfFill className="ms-1" />
-                      </Link>
+                      </a>
+                    </span>
+                  </div>
+                  <div className="col col-lg-12">
+                    <span>
+                      <a href="/diploma.pdf" target="_blank" rel="noopener noreferrer"
+                        className="text-reset fw-light d-inline-flex align-items-center" tabIndex={0} role="link" aria-label="View Diploma">
+                        Diploma<FileEarmarkMedicalFill className="ms-1" />
+                      </a>
                     </span>
                   </div>
                 </div>

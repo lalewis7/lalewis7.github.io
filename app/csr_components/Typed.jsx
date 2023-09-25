@@ -20,7 +20,7 @@ export default function TypedComponent({ strings }){
                 smartBackspace: false,
                 onLastStringBackspaced: () => typed.strPos = 0
             });
-        }, 1000)
+        }, 1200)
 
         return () => {
             // Destroy Typed instance during cleanup to stop animation
