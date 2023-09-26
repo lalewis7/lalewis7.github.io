@@ -5,8 +5,8 @@
         "img": "gearbrain.png",
         "time": "June 2019 - August 2019",
         "description": [
-            "Coded a RWD website using handlebars with the MeteorJS framework for partners and internal workers to manage and update data using the company API.",
-            "Implemented the UI based on styles from the content website.",
+            "Coded a RWD DMS website using handlebars with the MeteorJS framework for partners and employees to manage and update over 5,000 products for the content website receiving 385k unique visitors and 500k page views each month.",
+            "Implemented the user interface (UI) based on styles from the content website.",
             "Wrote test scripts to validate releases. Upon confirming the code, it was pushed to production using scripts from MeteorJS, which created docker images."
         ]
     }

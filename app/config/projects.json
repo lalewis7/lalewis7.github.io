@@ -61,7 +61,7 @@
     {
         "name": "AEquitas docs",
         "pathname": "aequitasdocs",
-        "description": "Collaborated with a small team to finish the development of a website for storing and searching legal documents given both technical and business requirements for the nonprofit AEquitas.",
+        "description": "Collaborated with a small team to finish the development of an online private search portal for storing a legal corpus of over 2,000 documents given both technical and business requirements.",
         "type": {
             "group": "school",
             "name": "Senior Capstone"
