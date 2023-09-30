@@ -148,8 +148,8 @@ export default function RootLayout({ children }) {
                 <div className="row row-gap-2">
                   <div className="col col-lg-12">
                     <span>
-                      <a href={`https://drive.google.com/uc?export=download&id=${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}`} 
-                        download={`${process.env.NEXT_PUBLIC_NAME.split(" ").join("_")}_Resume.pdf`}
+                      <a href={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_GDRIVE_ID}/view`} 
+                        target="_blank" rel="noopener noreferrer"
                         className="text-reset fw-light d-inline-flex align-items-center" tabIndex={0} role="link" aria-label="Download Resume">
                         Resume<FileEarmarkPdfFill className="ms-1" />
                       </a>
