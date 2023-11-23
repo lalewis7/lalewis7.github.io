@@ -91,7 +91,7 @@ export default function Home() {
       <div className="d-flex flex-column mt-5 mb-4">
         <h2 className="display-5 mb-3">Education & Experience</h2>
         {degrees.map(degree => <Education edu={degree} />)}
-        <span className="pt-5 pb-2"></span>
+        <span className="pt-4 pb-2"></span>
         {jobs.map(job => <WorkExperience job={job} />)}
         <Link href="/resume" className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2 align-self-center mt-4" tabIndex={0} role="link" aria-label="View Resume">
           View Resume <ArrowRight/>

@@ -1,8 +1,16 @@
 [
     {
+        "title": "Full-stack Software Engineer",
+        "company": "Confidential (NDA)",
+        "time": "October 2023 - Present",
+        "description": [
+            "Designing the architecture for a peer-to-peer service for scheduling and handling payments of teaching lessons between clients and professionals in the industry.",
+            "Building the platform using a NextJS frontend, MySQL database, NodeJS API hosted on AWS, payment processing using Stripe, and containerized and orchestrated using Kubernetes."
+        ]
+    },
+    {
         "title": "Software Engineer",
         "company": "Gearbrain",
-        "img": "gearbrain.png",
         "time": "June 2019 - August 2019",
         "description": [
             "Coded a RWD DMS website using handlebars with the MeteorJS framework for partners and employees to manage and update over 5,000 products for the content website receiving 385k unique visitors and 500k page views each month.",
