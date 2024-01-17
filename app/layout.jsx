@@ -179,7 +179,7 @@ export default function RootLayout({ children }) {
             <div className="row row-gap-1 mt-3">
               <div className="col col-12 col-md-6">
                 <p className="text-secondary-emphasis m-0">
-                Lanceton Arthur Lewis II &copy; 2023
+                Lanceton Arthur Lewis II &copy; 2024
                 </p>
               </div>
               <div className="col col-12 col-md-6">
