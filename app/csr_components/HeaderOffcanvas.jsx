@@ -3,8 +3,9 @@
 import Link from "next/link"
 import { useState } from "react";
 import { Button, Nav, Navbar, Offcanvas } from "react-bootstrap"
-import { Easel, EaselFill, FileEarmarkPdfFill, FiletypePdf, Github, House, HouseFill, InfoCircle, InfoCircleFill, Linkedin, List, Medium } from "react-bootstrap-icons";
+import { Easel, EaselFill, EnvelopeFill, FileEarmarkPdfFill, FiletypePdf, Github, House, HouseFill, InfoCircle, InfoCircleFill, Linkedin, List, Medium } from "react-bootstrap-icons";
 import { Roboto_Mono } from 'next/font/google'
+import CopyTextInput from "./CopyTextInput";
 
 const roboto_mono = Roboto_Mono({
     subsets: ['latin'],
@@ -51,6 +52,7 @@ export default function HeaderOffcanvas(props){
                         {"name": "LinkedIn", "link": "https://www.linkedin.com/in/arthur-lewis/", "icon": <Linkedin />},
                         {"name": "GitHub", "link": "https://github.com/lalewis7", "icon": <Github />},
                         {"name": "Medium", "link": "https://medium.com/@arthur.lewis", "icon": <Medium />},
+                        {"name": "Email", "link": `mailto:${process.env.NEXT_PUBLIC_EMAIL}`, "icon": <EnvelopeFill />},
                     ].map((val, i) => <>
                         <Nav.Item className="col-6" key={i}>
                             <Nav.Link as={Link} target="_blank" rel="noopener noreferrer" href={val.link} 
@@ -60,6 +62,9 @@ export default function HeaderOffcanvas(props){
                         </Nav.Item>
                     </>)}
                 </Nav>
+                <div className="pt-3">
+                    <CopyTextInput />
+                </div>
             </Offcanvas.Body>
         </Offcanvas>
     </>

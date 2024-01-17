@@ -17,14 +17,14 @@ export default function CopyTextInput(){
     }
 
     return <>
-        <div className="mw-100 px-2 px-sm-0 w-sm-50" >
+        <div className="mw-100 w-sm-50" >
             <InputGroup>
                 <Form.Control
                     aria-label="Email"
                     type="text"
                     size="sm"
                     value={process.env.NEXT_PUBLIC_EMAIL}
-                    className={`border-light focus-ring focus-ring-light rounded-start-5 ps-4 pe-2`}
+                    className={`border-light focus-ring focus-ring-light rounded-start-5 ps-4 pe-2 bg-transparent`}
                     style={{
                         paddingTop: "0.75rem",
                         paddingBottom: "0.75rem"

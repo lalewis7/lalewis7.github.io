@@ -80,22 +80,22 @@ export default function RootLayout({ children }) {
                 </div>
                 <li className="nav-item">
                   <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="LinkedIn">
-                    <Linkedin />
+                    <Linkedin size={22} />
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link target="_blank" rel="noopener noreferrer" href={process.env.GITHUB_LINK} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="GitHub">
-                    <Github />
+                    <Github size={22} />
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link target="_blank" rel="noopener noreferrer" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="Email">
-                    <EnvelopeFill />
+                    <EnvelopeFill size={22} />
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link target="_blank" rel="noopener noreferrer" href={process.env.MEDIUM_LINK} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="Medium">
-                    <Medium />
+                    <Medium size={22} />
                   </Link>
                 </li>
               </ul>
@@ -169,7 +169,9 @@ export default function RootLayout({ children }) {
                 <div className="h4">Contact</div>
                 <div className="row">
                   <div className="col">
-                    <CopyTextInput />
+                    <div className="px-2 px-sm-0">
+                      <CopyTextInput />
+                    </div>
                   </div>
                 </div>
               </div>
