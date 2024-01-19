@@ -237,5 +237,10 @@
         "Docker.svg", 
         "Azure-Dark.svg", 
         "AWS-Dark.svg"
+    ],
+    "favorite_repos": [
+        "refinedev/refine",
+        "colinhacks/zod",
+        "tandpfun/skill-icons"
     ]
 }

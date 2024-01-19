@@ -53,38 +53,27 @@ export default function Home() {
 
       <hr className="diamond" />
 
-      {/* <div className="d-flex flex-column" style={{marginTop: "5rem"}}>
-        <h2 className="display-5 mb-3">Project Portfolio</h2>
-        <div className="d-grid gap-3">
-          {projects.slice(0, 3).map((project, i) => <ProjectCard project={project} inverse={i % 2 === 1} />)}
-        </div>
-        <Link href="/portfolio" className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2 align-self-center mt-4" tabIndex={0} role="link" aria-label="View All Projects">
-          View All Projects <ArrowRight/>
-        </Link>
-      </div> */}
-
       <div className="d-flex flex-column mt-5 mb-4">
-        <h2 className="display-5 mb-3 d-flex align-items-center gap-2">
+        <h2 className="display-5 m-0 d-flex align-items-center gap-2">
           <BriefcaseFill size={32} className="mb-1" />
           Experience
         </h2>
-        {/* <span className="pt-4 pb-2"></span> */}
+        <hr className="mb-4 mt-1" />
         {config.work.map(job => <WorkExperience job={job} />)}
-        <h2 className="display-5 mt-2 mb-3 d-flex align-items-center gap-2">
+        <h2 className="display-5 mt-2 mb-0 d-flex align-items-center gap-2">
           <MortarboardFill size={32} className="mb-1" />
           Education
         </h2>
+        <hr className="mb-4 mt-1" />
         {config.education.map(degree => <Education edu={degree} />)}
-        {/* <Link href="/resume" className="btn btn-primary btn-lg rounded-5 d-inline-flex align-items-center gap-2 align-self-center mt-4" tabIndex={0} role="link" aria-label="View Resume">
-          View Resume <ArrowRight/>
-        </Link> */}
       </div>
 
       <div className="mt-5 d-flex flex-column">
-        <h2 className="display-5 mb-3 d-flex align-items-center gap-2">
+        <h2 className="display-5 mb-0 d-flex align-items-center gap-2">
           <LightbulbFill size={32} className="mb-1" />
           Technical Skills
         </h2>
+        <hr className="mb-4 mt-1" />
         <div className="d-grid gap-3" style={{fontSize: "3rem", gridTemplateColumns: "repeat(auto-fit, minmax(64px, 1fr))", justifyItems: "center"}}>
           {config.skills.map(skill => <Image src={`/skills/${skill}`} alt={getSkillIconName(skill)} width={64} height={64} title={getSkillIconName(skill)} />)}
         </div>
