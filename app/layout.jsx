@@ -60,7 +60,7 @@ export default function RootLayout({ children }) {
         <header className={`navbar navbar-expand-${mobileBreakpoint} fixed-top`}>
           <nav className="container">
             <Link href="/" className={`navbar-brand d-flex align-items-center ${roboto_mono.className}`}>
-              <img src={'icon.png'} width={28} className="me-3" />
+              <img src={'/icon.png'} width={28} className="me-3" />
               <span>{process.env.NEXT_PUBLIC_NAME}</span>
             </Link>
             <div className={`d-none d-${mobileBreakpoint}-block navbar-collapse`}>

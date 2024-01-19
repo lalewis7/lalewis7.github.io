@@ -41,8 +41,8 @@ export default function CopyEmail(){
             overlay={tooltip}
             onToggle={(show) => onToggle(show)}
         >   
-            <button className="nav-link d-flex align-items-center gap-2 lh-1" onClick={copy}>
-                <EnvelopeFill className="ms-1" /><span className="h6 m-0">{process.env.NEXT_PUBLIC_EMAIL}</span>
+            <button className="nav-link d-flex align-items-center gap-2 lh-1 nav-link" onClick={copy}>
+                <EnvelopeFill /><span className="h5 m-0">{process.env.NEXT_PUBLIC_EMAIL}</span>
             </button>  
         </OverlayTrigger>
     </>
