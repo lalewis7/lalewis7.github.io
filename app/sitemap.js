@@ -1,5 +1,4 @@
-// @ts-ignore
-import projects from "@/config/projects.json"
+import config from '@/config'
 
 export default function sitemap() {
     return [
@@ -27,7 +26,7 @@ export default function sitemap() {
             changeFrequency: 'monthly',
             priority: 1,
         },
-        ...projects.map(project => ({
+        ...config.projects.map(project => ({
             url: `https://arthurlewis.net/portfolio/${project.pathname}/`,
             lastModified: new Date(),
             changeFrequency: 'monthly',

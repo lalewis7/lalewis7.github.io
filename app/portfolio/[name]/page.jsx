@@ -1,6 +1,5 @@
 import Link from "next/link"
-// @ts-ignore
-import project_data from "@/config/projects.json";
+import config from '@/config'
 import { BoxArrowUpRight } from "react-bootstrap-icons";
 // markdown -> html
 import { MDXRemote } from 'next-mdx-remote/rsc'
@@ -11,13 +10,13 @@ import Image from "next/image";
 import LinkIcon from "@/components/LinkIcon";
 
 export async function generateStaticParams() {
-    return project_data.map(project => ({
+    return config.projects.map(project => ({
         name: project.pathname
     }))
 }
 
 export async function generateMetadata({ params }){
-    const project = project_data.find(prj => prj.pathname === params.name.toLowerCase())
+    const project = config.projects.find(prj => prj.pathname === params.name.toLowerCase())
 
     const page_title = `${project.name} - ${process.env.NEXT_PUBLIC_NAME} Project Portfolio`
     const page_description = `Find out more about ${project.name}, a ${project.type.name}, using ${project.skills.slice(0, project.skills.length-1).join(', ')}, and ${project.skills.slice(-1)}.`
@@ -42,7 +41,7 @@ export const dynamicParams = false
 
 export async function getProjectMarkdown(name){
     try {
-        const postsDirectory = 'app/config/projects';
+        const postsDirectory = 'app/projects';
         const fullPath = path.join(postsDirectory, `${name}.md`);
         return await fs.readFile(fullPath, 'utf8');
     }
@@ -54,9 +53,9 @@ export async function getProjectMarkdown(name){
 export default async function Project({ params }){
 
     let project = null
-    for (let i = 0; i < project_data.length; i++){
-        if (project_data[i].pathname === params.name.toLowerCase()){
-            project = project_data[i]
+    for (let i = 0; i < config.projects.length; i++){
+        if (config.projects[i].pathname === params.name.toLowerCase()){
+            project = config.projects[i]
             break
         }
     }

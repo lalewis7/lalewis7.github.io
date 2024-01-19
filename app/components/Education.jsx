@@ -10,11 +10,14 @@ export default function Education({ edu }) {
                 <div className="row flex-grow-1">
                     <div className="col col-12 col-md-8 mb-1">
                         <h3>{edu.school}</h3>
-                        <p className="fw-light lh-1 mb-0">{edu.degree}</p>
-                        <p className="fw-light mb-0">{edu.minor}</p>
+                        <p className="fw-normal lh-sm mb-0">
+                            {edu.degree}
+                            <br />
+                            {edu.minor}
+                        </p>
                     </div>
                     <div className="col col-12 col-md-4">
-                        <span className="fw-lighter float-md-end">{edu.time}</span>
+                        <span className="fw-light fst-italic float-md-end">{edu.time}</span>
                     </div>
                 </div>
             </div>

@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
-// @ts-ignore
-import skills from "@/config/skills.json";
+import config from '@/config';
 import { BoxArrowUpRight, InfoCircle } from "react-bootstrap-icons";
 import { getSkillIconName } from "@/util";
 
@@ -59,22 +58,6 @@ export default function About(){
                     LinkedIn<BoxArrowUpRight />
                 </Link>.
                 </p>
-            </div>
-            <div className="mb-4 mt-5">
-                {/* <h2>Skills</h2> */}
-                <hr className="mb-5 diamond" />
-                <p className="pb-4">
-                    I'm a formally trained computer scientist with experience in the following languages, frameworks, and technologies:
-                </p>
-                <div className="d-grid gap-3" style={{fontSize: "3rem", gridTemplateColumns: "repeat(auto-fit, minmax(64px, 1fr))", justifyItems: "center"}}>
-                    {skills.map(skill => <Image src={`/skills/${skill}`} alt={getSkillIconName(skill)} width={64} height={64} title={getSkillIconName(skill)} />)}
-                </div>
-                <span className="d-flex align-items-center justify-content-end text-secondary-emphasis mt-2 gap-1 fw-lighter">
-                    <InfoCircle /> Icons from <Link href="https://skillicons.dev/" tabIndex={-1} role="link" aria-label="Skill Icons">Skill Icons</Link>
-                </span>
-                <p className="fw-light text-secondary-emphasis my-3 text-center fst-italic">{
-                    `(${skills.map(skill => getSkillIconName(skill)).slice(0, skills.length - 1).join(', ')}, and ${getSkillIconName(skills.slice(-1)[0])})`
-                }</p>
             </div>
         </div>
     </>

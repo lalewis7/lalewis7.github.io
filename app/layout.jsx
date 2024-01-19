@@ -59,8 +59,9 @@ export default function RootLayout({ children }) {
       <body className={`${roboto.className} vh-100 d-flex flex-column pt-5`} data-bs-theme="dark">
         <header className={`navbar navbar-expand-${mobileBreakpoint} fixed-top`}>
           <nav className="container">
-            <Link href="/" className={`navbar-brand ${roboto_mono.className}`}>
-              &lt; {process.env.NEXT_PUBLIC_NAME} &#47;&gt;
+            <Link href="/" className={`navbar-brand d-flex align-items-center ${roboto_mono.className}`}>
+              <img src={'icon.png'} width={28} className="me-3" />
+              <span>{process.env.NEXT_PUBLIC_NAME}</span>
             </Link>
             <div className={`d-none d-${mobileBreakpoint}-block navbar-collapse`}>
               <ul className="navbar-nav">

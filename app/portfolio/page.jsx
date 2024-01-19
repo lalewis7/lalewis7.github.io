@@ -1,7 +1,6 @@
 import Link from "next/link";
-// @ts-ignore
-import projects from "@/config/projects.json";
 import ProjectCard from "@/components/ProjectCard";
+import config from '@/config'
 
 const page_title = `Project Portfolio - ${process.env.NEXT_PUBLIC_NAME}`
 const page_description = 'View my portfolio of personal, school, and work projects I\'ve completed as a software engineer.'
@@ -35,7 +34,7 @@ export default function Portfolio(){
             </nav>
             <h1 className="display-4 mb-3">Project Portfolio</h1>
             <div className="d-grid gap-3">
-                {projects.map((project, i) => <ProjectCard project={project} inverse={i % 2 === 1} />)}
+                {config.projects.map((project, i) => <ProjectCard project={project} inverse={i % 2 === 1} />)}
             </div>
         </div>
     </>

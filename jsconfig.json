@@ -5,7 +5,8 @@
     },
     "baseUrl": "app",
     "jsx": "preserve",
-    "checkJs": true
+    "checkJs": true,
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules", "build", "dist", "lib", ".next"]
 }
