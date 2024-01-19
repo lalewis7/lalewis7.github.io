@@ -50,15 +50,15 @@ export default function GithubRepository({
                 </div>
                 <Link href={data.stargazers_url} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center gap-1 fw-light github-links">
                     <Star className="mb-1" size={18} />
-                    {data.stargazers_count}
+                    {data.stargazers_count.toLocaleString()}
                 </Link>
                 <Link href={data.forks_url} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center gap-1 fw-light github-links">
                     <Fork className="mb-1" size={18} />
-                    {data.forks_count}
+                    {data.forks_count.toLocaleString()}
                 </Link>
                 <div className="d-flex align-items-center gap-1 fw-light">
                     <Eye className="mb-1" size={18} />
-                    {data.watchers_count}
+                    {data.watchers_count.toLocaleString()}
                 </div>
             </div>
         </>
