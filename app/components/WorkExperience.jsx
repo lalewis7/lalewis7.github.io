@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function WorkExperience({ job }) {
     return <>
-        <div className="d-flex gap-3 pb-4">
+        <div className="d-flex gap-3 mb-3">
             {/* <div>
                 <Image src={`/work/${job.img}`} alt={`${job.company} logo`} width={64} height={64} className="rounded-3" />
             </div> */}
@@ -16,7 +16,7 @@ export default function WorkExperience({ job }) {
                         <span className="fw-light fst-italic float-md-end">{job.time}</span>
                     </div>
                 </div>
-                <ul>
+                <ul className="mb-0">
                     {job.description.map(point => <li className="mb-1 fw-normal">{point}</li>)}
                 </ul>
             </div>

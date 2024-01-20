@@ -24,7 +24,7 @@ export default function Home() {
           </h4>
           <div className="h4 d-inline-flex gap-4 mb-4 ps-1 flex-wrap align-items-center">
             <Link href="/resume" className="nav-link d-flex align-items-center gap-2 lh-1" tabIndex={0} role="link" aria-label="Resume">
-              <FileEarmarkPdfFill className="ms-1" />Resume
+              <FileEarmarkPdfFill />Resume
             </Link>
             <Link target="_blank" rel="noopener noreferrer" href={process.env.LINKEDIN_LINK} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="LinkedIn">
               <Linkedin />
@@ -58,13 +58,13 @@ export default function Home() {
           <BriefcaseFill size={32} className="mb-1" />
           Experience
         </h2>
-        <hr className="mb-4 mt-1" />
+        <hr className="mb-3 mt-1" />
         {config.work.map(job => <WorkExperience job={job} />)}
-        <h2 className="display-5 mt-2 mb-0 d-flex align-items-center gap-2">
+        <h2 className="display-5 mt-4 mb-0 d-flex align-items-center gap-2">
           <MortarboardFill size={32} className="mb-1" />
           Education
         </h2>
-        <hr className="mb-4 mt-1" />
+        <hr className="mb-3 mt-1" />
         {config.education.map(degree => <Education edu={degree} />)}
       </div>
 
@@ -73,7 +73,7 @@ export default function Home() {
           <LightbulbFill size={32} className="mb-1" />
           Technical Skills
         </h2>
-        <hr className="mb-4 mt-1" />
+        <hr className="mb-3 mt-1" />
         <div className="d-grid gap-3" style={{fontSize: "3rem", gridTemplateColumns: "repeat(auto-fit, minmax(64px, 1fr))", justifyItems: "center"}}>
           {config.skills.map(skill => <Image src={`/skills/${skill}`} alt={getSkillIconName(skill)} width={64} height={64} title={getSkillIconName(skill)} />)}
         </div>
