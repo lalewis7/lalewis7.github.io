@@ -58,5 +58,5 @@ npm run dev
 [Namecheap-url]: https://www.namecheap.com/
 [Githubpages]: https://img.shields.io/badge/Github%20Pages-222222?style=for-the-badge&logo=githubpages&logoColor=ffffff
 [Githubpages-url]: https://pages.github.com/
-[Githubactions]: https://img.shields.io/badge/Github%20Pages-222222?style=for-the-badge&logo=githubactions&logoColor=2088FF
+[Githubactions]: https://img.shields.io/badge/Github%20Actions-222222?style=for-the-badge&logo=githubactions&logoColor=2088FF
 [Githubactions-url]: https://github.com/features/actions
