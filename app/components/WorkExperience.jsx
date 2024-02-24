@@ -16,9 +16,10 @@ export default function WorkExperience({ job }) {
                         <span className="fw-light fst-italic float-md-end">{job.time}</span>
                     </div>
                 </div>
+                {job.description ? 
                 <ul className="mb-0">
                     {job.description.map(point => <li className="mb-1 fw-normal">{point}</li>)}
-                </ul>
+                </ul> : ''}
             </div>
         </div>
     </>
