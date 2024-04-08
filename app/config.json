@@ -108,8 +108,8 @@
             "img": "streamdex.png",
             "links": [
                 {
-                    "name": "Live",
-                    "link": "https://streamdex.net"
+                    "name": "GitHub",
+                    "link": "https://github.com/lalewis7/streamdex"
                 }
             ],
             "skills": [
