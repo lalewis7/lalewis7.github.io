@@ -192,15 +192,6 @@
             "time": "February 2024 - Present"
         },
         {
-            "title": "Full-Stack Software Engineer",
-            "company": "Tech Startup (NDA)",
-            "time": "October 2023 - Present",
-            "description": [
-                "Designing the architecture for a peer-to-peer service used to schedule and handle payments of outdoor athletic lessons between clients and industry professionals",
-                "Building the platform using a NextJS frontend, MySQL database, NodeJS API hosted on AWS, and payment processing using Stripe in a containerized environment"
-            ]
-        },
-        {
             "title": "Software Engineer Intern",
             "company": "Gearbrain",
             "time": "June 2019 - August 2019",
