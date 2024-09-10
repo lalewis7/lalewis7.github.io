@@ -1,13 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import Typed from "./csr_components/Typed";
 import config from '@/config';
 import { BriefcaseFill, Clipboard, EnvelopeFill, FileEarmarkPdfFill, Github, InfoCircle, LightbulbFill, Linkedin, Medium, MortarboardFill } from "react-bootstrap-icons";
 import { getSkillIconName } from "./util";
 import WorkExperience from "./components/WorkExperience";
 import styles from "./page.module.scss";
 import Education from "./components/Education";
-import CopyEmail from "./csr_components/CopyEmail";
 
 export default function Home() {
   return <>
@@ -16,8 +14,7 @@ export default function Home() {
         <div>
           <h1 className="display-1 fw-bold" tabIndex={0}>{process.env.NEXT_PUBLIC_NAME}</h1>
           <h2 className={`display-5 text-body-secondary`}>
-            <noscript>Software Engineer</noscript>
-            <Typed strings={[ "Creative Solutionist", "Fitness Enthusiast", "Meticulous Designer", "Software Engineer"]} />&nbsp;
+            Software Engineer
           </h2>
           <h4 className="text-body-secondary mb-4 mt-3 fw-light" tabIndex={0}>
             My mission is to design and create software using the latest frameworks and technologies to positively impact people.
@@ -35,18 +32,6 @@ export default function Home() {
             <Link target="_blank" rel="noopener noreferrer" href={process.env.MEDIUM_LINK} className="nav-link d-inline-flex" tabIndex={0} role="link" aria-label="Medium">
               <Medium />
             </Link>
-            <CopyEmail />
-            {/* <Link target="_blank" rel="noopener noreferrer" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} className="nav-link d-flex align-items-center gap-2 lh-1" tabIndex={0} role="link" aria-label="Email">
-              <EnvelopeFill className="ms-1" /><span className="h6 m-0">{process.env.NEXT_PUBLIC_EMAIL}</span>
-            </Link> */}
-          </div>
-          <div className="d-flex flex-wrap gap-2 mt-2" style={{marginBottom: "4rem"}}>
-            <Link href="/about" role="link" aria-label="About" className="btn btn-primary btn-lg rounded-5">
-              About Me
-            </Link>
-            <Link href="/portfolio" role="link" aria-label="Resume" className="btn btn-primary btn-lg rounded-5"> 
-              See My Work
-            </Link>
           </div>
         </div>
       </div>
@@ -55,13 +40,11 @@ export default function Home() {
 
       <div className="d-flex flex-column mt-5 mb-4">
         <h2 className="display-5 m-0 d-flex align-items-center gap-2">
-          <BriefcaseFill size={32} className="mb-1" />
           Experience
         </h2>
         <hr className="mb-3 mt-1" />
         {config.work.map(job => <WorkExperience job={job} />)}
         <h2 className="display-5 mt-4 mb-0 d-flex align-items-center gap-2">
-          <MortarboardFill size={32} className="mb-1" />
           Education
         </h2>
         <hr className="mb-3 mt-1" />
@@ -70,7 +53,6 @@ export default function Home() {
 
       <div className="mt-5 d-flex flex-column">
         <h2 className="display-5 mb-0 d-flex align-items-center gap-2">
-          <LightbulbFill size={32} className="mb-1" />
           Technical Skills
         </h2>
         <hr className="mb-3 mt-1" />

@@ -66,12 +66,6 @@ export default function RootLayout({ children }) {
             <div className={`d-none d-${mobileBreakpoint}-block navbar-collapse`}>
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <HeaderLink label="About" route="/about" />
-                </li>
-                <li className="nav-item">
-                  <HeaderLink label="Projects" route="/portfolio" />
-                </li>
-                <li className="nav-item">
                   <HeaderLink label="Resume" route="/resume" />
                 </li>
                 <div style={{width: "1px"}} className="d-flex align-items-center">
