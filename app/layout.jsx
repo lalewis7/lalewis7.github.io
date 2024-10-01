@@ -130,10 +130,8 @@ export default function RootLayout({ children }) {
                 <div className="row">
                   <div className="col col-6 gap-2 d-flex flex-column">
                     <span className="d-flex"><Link href="/" className="text-reset fw-light d-inline-flex" tabIndex={0} role="link" aria-label="Home">Home</Link></span>
-                    <span className="d-flex"><Link href="/portfolio" className="text-reset fw-light d-inline-flex" tabIndex={0} role="link" aria-label="Projects">Projects</Link></span>
                   </div>
                   <div className="col col-6 gap-2 d-flex flex-column">
-                    <span className="d-flex"><Link href="/about" className="text-reset fw-light d-inline-flex" tabIndex={0} role="link" aria-label="About">About</Link></span>
                     <span className="d-flex"><Link href="/resume" className="text-reset fw-light d-inline-flex" tabIndex={0} role="link" aria-label="Resume">Resume</Link></span>
                   </div>
                 </div>

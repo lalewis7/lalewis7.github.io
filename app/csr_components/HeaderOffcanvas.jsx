@@ -2,22 +2,21 @@
 
 import Link from "next/link"
 import { useState } from "react";
-import { Button, Nav, Navbar, Offcanvas } from "react-bootstrap"
-import { Easel, EaselFill, EnvelopeFill, FileEarmarkPdfFill, FiletypePdf, Github, House, HouseFill, InfoCircle, InfoCircleFill, Linkedin, List, Medium } from "react-bootstrap-icons";
+import { Button, Nav, Offcanvas } from "react-bootstrap"
+import { EnvelopeFill, FileEarmarkPdfFill, Github, HouseFill, Linkedin, List, Medium } from "react-bootstrap-icons";
 import { Roboto_Mono } from 'next/font/google'
 import CopyTextInput from "./CopyTextInput";
 
 const roboto_mono = Roboto_Mono({
     subsets: ['latin'],
     weight: ['400', '700']
-  })
+})
 
 export default function HeaderOffcanvas(props){
 
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
     const handleToggle = () => setShow(prev => !prev);
 
     return <>
@@ -36,8 +35,6 @@ export default function HeaderOffcanvas(props){
                 <Nav as="nav" className="flex-row flex-wrap">
                     {[
                         {"name": "Home", "link": "/", "icon": <HouseFill /> },
-                        {"name": "About", "link": "/about", "icon": <InfoCircleFill /> },
-                        {"name": "Projects", "link": "/portfolio", "icon": <EaselFill /> },
                         {"name": "Resume", "link": "/resume", "icon": <FileEarmarkPdfFill /> },
                     ].map((val, i) => <>
                         <Nav.Item className="col-6" key={i}>
