@@ -35,12 +35,9 @@
         "Java-Dark.svg",
         "JavaScript.svg",  
         "TypeScript.svg",
-        "Python-Dark.svg",
-        "C++.svg",
     
         "React-Dark.svg", 
         "NextJS-Dark.svg",
-        "VueJS-Dark.svg", 
         "Redux.svg", 
         "Bootstrap.svg", 
         "Sass.svg", 
@@ -53,14 +50,11 @@
         "NodeJS-Dark.svg", 
     
         "MySQL-Dark.svg", 
-        "MongoDB.svg", 
         "PostgreSQL-Dark.svg",
-        "Postman.svg", 
     
         "Git.svg", 
         "GithubActions-Dark.svg",
         "Docker.svg", 
-        "Azure-Dark.svg", 
         "AWS-Dark.svg"
     ],
     "favorite_repos": [
