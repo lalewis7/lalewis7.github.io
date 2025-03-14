@@ -16,8 +16,7 @@
             "description": [
                 "Write code for Pinnacle 21 and other Certara SaaS products used in the drug development process; maintain clear communication among senior engineers, product owners, and testers.",
                 "Advised four student interns as a technical lead: guided them through the software development lifecycle, provided feedback on pull requests, and served as their first point of contact for any questions or concerns.",
-                "Debugged a slow database query by examining the execution plan and identifying a bottleneck in one of the views, optimizing the performance by up to 50 percent.",
-                "Created a convenience configuration property to fix a long-lasting, developer-facing bug that was wasting engineers’ time."
+                "Debugged a slow database query by examining the execution plan and identifying a bottleneck in one of the views, optimizing the performance by up to 50 percent."
             ]
         },
         {
