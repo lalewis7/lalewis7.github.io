@@ -10,13 +10,22 @@
     ],
     "work": [
         {
+            "title": "Software Engineer II",
+            "company": "Certara",
+            "time": "April 2025 – Present",
+            "description": [
+                "Develop and write code across the full stack for Pinnacle 21, a SaaS product in the drug development process, leveraging strong communication skills to collaborate effectively with engineers, product owners, and testers to ensure seamless project execution and delivery.",
+                "Contributed to the interview team for software engineering and intern candidates, conducting both behavioral and technical assessments to evaluate skills, cultural fit, and potential contributions to the team."
+            ]
+        }
+        {
             "title": "Software Engineer I",
             "company": "Certara",
-            "time": "February 2024 - Present",
+            "time": "February 2024 - March 2025",
             "description": [
-                "Write code for Pinnacle 21 and other Certara SaaS products used in the drug development process; maintain clear communication among senior engineers, product owners, and testers.",
                 "Advised four student interns as a technical lead: guided them through the software development lifecycle, provided feedback on pull requests, and served as their first point of contact for any questions or concerns.",
-                "Debugged a slow database query by examining the execution plan and identifying a bottleneck in one of the views, optimizing the performance by up to 50 percent."
+                "Debugged a slow database query by examining the execution plan and identifying a bottleneck in one of the views, optimizing the performance by up to 50%.",
+                "Identified and resolved a critical security vulnerability that had successfully bypassed previous penetration testing, enhancing the overall security of the application and safeguarding sensitive user data."
             ]
         },
         {
